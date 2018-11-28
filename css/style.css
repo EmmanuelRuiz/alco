@@ -2768,7 +2768,7 @@ button.search-button:before{content: "\e922";}
       }
 
       .contact-info li.info-item > .item-info h4{
-        font-size: 32px;
+        font-size: 22px;
         font-weight: 600;
         color: #cc1f1a;
         line-height: 26px;
@@ -2833,6 +2833,10 @@ button.search-button:before{content: "\e922";}
     .social-icons li a .icon-linkedin-3{
       color: #006699;
     }
+
+    .social-icons li a .icon-whatsapp {
+    color: #4FA73B ;
+}
 
   .social-icons.style-2{
     margin: 0 -5px -10px;
