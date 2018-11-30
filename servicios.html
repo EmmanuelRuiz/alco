@@ -9,7 +9,7 @@
   <!-- Basic Page Needs
   ================================================== -->
 
-  <title>Termosolar</title>
+  <title>Alco Playa</title>
   
   <!--meta info-->
   <meta charset="utf-8">
@@ -159,7 +159,7 @@
                     <ul>
                       <li>Diseño de espacios,</li>
                       <li>Proyectos arquitectónicos,</li>
-                      <li>Catálogos, presupuestos y gestoría</li>
+                      <li>Catálogos, Presupuestos y Gestoría</li>
                     </ul>
                   </div>
                 </div>
@@ -265,7 +265,8 @@
                     <i class="cicon-ac-repair-maintenance"></i>
                     <h5 class="icons-box-title"><a href="#">Aires Acondicionados</a></h5>
                     <ul>
-                      <li>instalación y </li>
+                      <li>Colocación,</li>
+                      <li>Instalación y </li>
                       <li>Mantenimiento</li>
                     </ul>
                   </div>
@@ -278,6 +279,12 @@
                   <div class="item-box">
                     <i class="cicon-furnace-repair-maintenance"></i>
                     <h5 class="icons-box-title"><a href="#">Instalaciones de Gas</a></h5>
+                    <ul>
+                      <li>Suministro,</li>
+                      <li>Colocación,</li>
+                      <li>Instalación y </li>
+                      <li>Conexión</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -287,7 +294,12 @@
                 <div class="icons-item">
                   <div class="item-box">
                     <i class="cicon-lighting"></i>
-                    <h5 class="icons-box-title"><a href="#">Pergolas y Palapas</a></h5>
+                    <h5 class="icons-box-title"><a href="#">Palapas y Pergolas</a></h5>
+                    <ul>
+                      <li>Suministro,</li>
+                      <li>Colocación y</li>
+                      <li>Mantenimiento</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -298,6 +310,12 @@
                   <div class="item-box">
                     <i class="cicon-generators"></i>
                     <h5 class="icons-box-title"><a href="#">Mantenimiento de electrodomésticos</a></h5>
+                    <ul>
+                      <li>Lavadoras,</li>
+                      <li>Secadoras,</li>
+                      <li>Refrigeradores,</li>
+                      <li>Estufas y Hornos</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -374,63 +392,64 @@
 
         </div>
 
-      <div class="page-section-bg3">
-        
+      <div class="call-out call-out-form">
         <div class="container">
-          
-          <div class="row">
-            <div class="col-md-6 col-sm-12">
-              
-              <h2 class="section-title">Request Service Today!</h2>
-              <p class="text-size-medium">Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. </p>
-              <p class="text-size-medium">Duis ac turpis. Mauris fermentum dictum magna. Sed laoreet <br> aliquam leo. Ut tellus dolor, dapibus eget, elementum.</p>
+          <div class="call-out-item">
 
-            </div>
-            <div class="col-md-6 col-sm-12">
-              
-              <form class="form-wrap flex-row fx-col-2 style-2">
+            <span class="call-out-icon cicon-glove"></span>
+            
+            <div class="row">
+              <div class="col-md-3 col-sm-12">
+
+                <h2 class="nl-title">Envíanos un mensaje</h2>
+
+              </div>
+              <div class="col-md-9 col-sm-12">
+                
+                <form id="contact-form" class="form-wrap flex-row fx-col-3 style-2">
                  
-                <div class="form-col">
-                  <input type="text" placeholder="Name *">
-                </div>
-
-                <div class="form-col">
-                  <input type="text" placeholder="Phone *">
-                </div>
-
-                <div class="form-col">
-                  <input type="text" placeholder="Email *">
-                </div>
-
-                <div class="form-col">
-                  <div class="custom-select">
-                    <div class="select-title">Type of Service</div>
-                    <ul id="menu-type" class="select-list"></ul>
-                    <select class="hide">
-                      <option value="menu">Sort 1</option>
-                      <option value="menu">Sort 2</option>
-                      <option value="menu">Sort 3</option>
-                    </select>
+                  <div class="form-col">
+                    <input type="text" name="cf-name" placeholder="Nombre" required>
                   </div>
-                </div>
 
-                <div class="form-col full-width">
-                  <input type="text" placeholder="How Can We Help You?">
-                </div>
+                  <div class="form-col">
+                    <input type="email" name="cf-email" placeholder="E-mail" required>
+                  </div>
 
-                <div class="form-col">
-                  <a href="#" class="btn btn-style-5">Submit Request</a>
-                </div>
+                  <div class="form-col">
+                    <input type="tel" name="cf-phone" placeholder="Teléfono" required>
+                  </div>
 
-              </form>
+                  <div class="form-col">
+                    <div class="custom-select">
+                      <div class="select-title">Servicio</div>
+                      <ul id="menu-type" class="select-list"></ul>
+                      <select class="hide" name="cf-service">
+                        <option value="menu1">General</option>
+                        <option value="menu2">Acabados</option>
+                        <option value="menu3">Obra civil</option>
+                        <option value="menu3">Arquitectura</option>
+                      </select>
+                    </div>
+                  </div>
 
+                  <div class="form-col">
+                    <textarea name="cf-message" placeholder="Comentario"></textarea>
+                  </div>
+
+                  <div class="form-col">
+                    <button type="submit" data-type="submit" class="btn btn-style-5 full-width">Enviar mensaje</button>
+                  </div>
+
+                </form>
+
+              </div>
             </div>
+
           </div>
-
         </div>
-
       </div>
-
+      
     </div>
     <!-- - - - - - - - - - - - - end Content - - - - - - - - - - - - - - - -->
 
