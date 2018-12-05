@@ -393,7 +393,7 @@ img.alignright{
 
 h1,h2,h3,h4,h5,h6{
   font-family: 'Oswald', sans-serif;
-  color: #003056;
+  color: #2A4353;
   line-height: 1.3em;
   font-weight: 400;
   letter-spacing: 0.3px;
@@ -834,7 +834,7 @@ a:hover .tooltip{
   /* header-3 */
 
   .header.style-3.clone-fixed{
-    background: #003056;
+    background: #2A4353;
   }
 
   .header.style-3 .pre-header{
@@ -852,7 +852,7 @@ a:hover .tooltip{
   }
 
     .header.style-3 .menu-holder .menu-wrap{
-      background: #003056;
+      background: #2A4353;
       padding: 10px;
       border-radius: 3px;
     }
@@ -860,7 +860,7 @@ a:hover .tooltip{
     .header.style-3 .main-navigation > ul > li.current > a, 
     .header.style-3 .main-navigation > ul > li:hover > a{
       background: transparent;
-      color: #47d9bf;
+      color: #1998a6;
     }
 
     .header.style-3 .main-navigation > ul > li > a{
@@ -1934,9 +1934,9 @@ button.search-button:before{content: "\e922";}
     display: inline-block;
     font-size: 16px;
     border-radius: 3px;
-    background: #e3e3e3;
+    background: #1998a6;
     font-weight: 500;
-    color: #222;
+    color: #fff;
     text-align: center;
     line-height: 24px;
     letter-spacing: 0.5px;
@@ -1944,7 +1944,7 @@ button.search-button:before{content: "\e922";}
   }
 
   .btn:hover{
-    background: #044a7f!important;
+    background: #1f8792 !important;
     color: #fff!important;
   }
 
@@ -1978,7 +1978,7 @@ button.search-button:before{content: "\e922";}
   }
 
   [class*="btn"].btn-style-5{
-    background: #ffdb3e;
+    background: #1998a6;
   }
 
   [class*="btn"].btn-style-6{
@@ -2770,7 +2770,7 @@ button.search-button:before{content: "\e922";}
       .contact-info li.info-item > .item-info h4{
         font-size: 22px;
         font-weight: 600;
-        color: #cc1f1a;
+        color: #1998a6;
         line-height: 26px;
       }
 
@@ -3541,11 +3541,7 @@ button.search-button:before{content: "\e922";}
 
   .call-out.call-out-form,
   .page-section-bg3{
-    background: #00a1d9;
-    background: -moz-linear-gradient(left, #00a1d9 0%, #32c8c7 100%);
-    background: -webkit-linear-gradient(left, #00a1d9 0%,#32c8c7 100%);
-    background: linear-gradient(to right, #00a1d9 0%,#32c8c7 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a1d9', endColorstr='#32c8c7',GradientType=1 );
+    background: #1998a6;
   }
 
   .call-out-form:not(.style-2) .newsletter-wrap{
@@ -3593,7 +3589,7 @@ button.search-button:before{content: "\e922";}
 
   .call-out.type1{
     padding: 50px 0;
-    background: #cc1f1a;
+    background: #2A4353;
   }
 
   .call-out.type1 h4{
@@ -3779,19 +3775,19 @@ button.search-button:before{content: "\e922";}
   }
 
   .icons-box.icons-bg .icons-wrap:nth-child(1) .item-box{
-    background: #003056;
+    background: #10646E;
   }
 
   .icons-box.icons-bg .icons-wrap:nth-child(2) .item-box{
-    background: #03417a;
+    background: #147C87;
   }
 
   .icons-box.icons-bg .icons-wrap:nth-child(3) .item-box{
-    background: #00a1d9;
+    background: #168794;
   }
 
   .icons-box.icons-bg .icons-wrap:nth-child(4) .item-box{
-    background: #47d9bf;
+    background: #1998A6;
   }
 
   .icons-box.icons-bg .icons-wrap:nth-child(5) .item-box{
@@ -3843,7 +3839,7 @@ button.search-button:before{content: "\e922";}
   }
 
   .icons-box .item-box > .icons-box-title > a{
-    color: #04518c;
+    color: #2A4353;
     border-bottom: 1px solid transparent;
     letter-spacing: 0.3px;
   }
@@ -3989,7 +3985,7 @@ button.search-button:before{content: "\e922";}
       position: absolute;
       left: 0;
       top: 0;
-      color: #00a1d9;
+      color: #1998a6;
       font-size: 40px;
 
       transition: all .45s ease;
@@ -4658,7 +4654,7 @@ button.search-button:before{content: "\e922";}
 
   .counter-wrap.style-2 .counter .count-item > span,
   .counter-wrap.style-2 .count-number{
-    color: #47d9bf;
+    color: #fff;
   }
 
   .counter-wrap.style-2 .counter{
@@ -6630,7 +6626,7 @@ button.search-button:before{content: "\e922";}
 /* ----------------- Footer style-2 ---------------- */
 
 .footer.style-2{
-  background: #102739;
+  background: #2A4353;
 }
 
   .footer.style-2 .info-links > li > a{
