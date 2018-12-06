@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
     <div class="loader"></div>
@@ -45,12 +46,26 @@
     <nav id="mobile-advanced" class="mobile-advanced"></nav>
     <!-- - - - - - - - - - - - - - Header - - - - - - - - - - - - - - - - -->
     <header id="header" class="header style-3 sticky-header">
+        <!-- searchform -->
+        <div class="searchform-wrap">
+            <div class="vc-child h-inherit">
+                <form>
+                    <button type="submit" class="btn btn-style-5">Search</button>
+                    <div class="wrapper">
+                        <input type="text" name="search" placeholder="Start typing...">
+                    </div>
+                </form>
+                <button class="close-search-form"></button>
+            </div>
+        </div>
+        <!-- pre-header -->
         <div class="pre-header">
+            
             <div class="container extra-width">
                 <div class="flex-row flex-justify">
                     <ul class="menu-list">
-                        Horario L - V 9:00-17:00 / S 9:00-14:00
-                        <li><i class="licon-map-marker"></i> Cancún - Playa del Carmen - Tulúm</li>
+                        <li><i class="licon-clock3"></i> L - V: 9:00 - 17:00 hrs / S: 9:00 - 14:00 hrs</li>
+                        <li><i class="licon-map-marker"></i> Playa del Carmen - Cancún - Tulúm</li>
                     </ul>
                     <ul class="social-icons">
                         <li><a href="mailto:alco@alcoplaya.com"><i class=" icon-mail"></i> alco@alcoplaya.com</a></li>
@@ -93,9 +108,9 @@
                         <!-- - - - - - - - - - - - - - Navigation - - - - - - - - - - - - - - - - -->
                         <nav id="main-navigation" class="main-navigation">
                             <ul id="menu" class="clearfix">
-                                <li class=""><a href="index.html">Inicio</a></li>
-                                <li class="current"><a href="servicios.html">Servicios</a></li>
-                                <li class=""><a href="#">Portafolio</a> </li>
+                                <li class="current  "><a href="index.html">Inicio</a></li>
+                                <li class=""><a href="servicios.html">Servicios</a></li>
+                                <li class=""><a href="portafolio.html">Portafolio</a> </li>
                                 <li class=""><a href="nosotros.html">Nosotros</a> </li>
                                 <li class=""><a href="contacto.html">Contacto</a> </li>
                             </ul>
@@ -109,7 +124,6 @@
                 </div>
             </div>
         </div>
-        
     </header>
     <!-- - - - - - - - - - - - - end Header - - - - - - - - - - - - - - - -->
     <!-- - - - - - - - - - - - - - Breadcrumbs - - - - - - - - - - - - - - - - -->
@@ -161,7 +175,7 @@
                                 <textarea type="text" placeholder="Comentarios" rows="3"></textarea>
                             </div>
                             <div class="form-col">
-                                <a href="#" class="btn btn-style-5 full-width">Enviar mensaje</a>
+                                <a href="#" class="btn btn-style-5 full-width" id="btn-send">Enviar mensaje</a>
                             </div>
                         </form>
                     </div>
@@ -170,8 +184,8 @@
                 <!--tabs content-->
                 <div class="tabs-content">
                     <div class="content-element3">
-                        <p>La arquitectura es la técnica de realizar proyecciones, diseños, contrucciones y modificaciones como lo son edificios, estructuras o espacios arquitectónicos y urbanos.</p>
-                        <p>No realices construcciones sin un proyecto previo, permite que nos encarguemos de proyectar tus ideas de la manera más óptima, una buena construcción se proviene de un buen proyecto. Si requieres los planos para una obra o solamente requieres el presupuesto de la obra, nosotros podemos realizarlo de manera profesional.</p>
+                        <p>La arquitectura es la técnica de realizar proyecciones, diseños, construcciones y modificaciones como lo son edificios, estructuras o espacios arquitectónicos y urbanos.</p>
+                        <p>No realices construcciones sin un proyecto previo, permite que nos encarguemos de proyectar tus ideas de la forma más óptima, una buena construcción proviene de un buen proyecto. Si requieres los planos para una obra o solamente requieres el presupuesto de la obra, nosotros podemos realizarlo de manera profesional.</p>
                     </div>
                     <div class="content-element3">
                         <img src="images/750x350_img1.jpg" alt="">
@@ -200,47 +214,44 @@
 <div id="content" class="page-content-wrap">
     <div class="container">
         <div class="content-element">
-            <h3 class="section-title">Related Projects</h3>
+            <h3 class="section-title">Otros Servicios</h3>
             <div class="portfolio-holder three-collumn flex-row">
-                
-                <div class="item">
-                    <div class="project">
-                        <div class="project-image">
-                            <img src="images/360x260_img8.jpg" alt="">
-                            <a href="images/360x260_img8.jpg" class="project-link" data-fancybox="group"></a>
-                            <div class="project-description">
-                                <h4 class="project-title"><a href="#">Sed Laoreet Aliquam Leo</a></h4>
-                                <ul class="project-cats">
-                                    <li><a href="#">Air Quality</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="project">
-                        <div class="project-image">
-                            <img src="images/360x260_img4.jpg" alt="">
-                            <a href="images/360x260_img4.jpg" class="project-link" data-fancybox="group"></a>
-                            <div class="project-description">
-                                <h4 class="project-title"><a href="#">Mauris Fermentum Dictum</a></h4>
-                                <ul class="project-cats">
-                                    <li><a href="#">Cooling</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="project">
-                        <div class="project-image">
-                            <img src="images/360x260_img9.jpg" alt="">
-                            <a href="images/360x260_img9.jpg" class="project-link" data-fancybox="group"></a>
-                            <div class="project-description">
-                                <h4 class="project-title"><a href="#">Ut Enim ad Minima</a></h4>
-                                <ul class="project-cats">
-                                    <li><a href="#">Electrical</a></li>
-                                </ul>
+                <div class="page-section">
+                    <div class="container">
+                        <div class="carousel-type-2">
+                            <div class="owl-carousel" data-item-margin="30" data-max-items="6" data-autoplay="true">
+                                
+                                <div class="item-carousel">
+                                    <a href="#"><img src="images/alco/logo-cliente.jpg" alt="">1</a>
+                                </div>
+                                <div class="item-carousel">
+                                    <a href="#"><img src="images/alco/logo-cliente.jpg" alt="">2</a>
+                                </div>
+                                <div class="item-carousel">
+                                    <a href="#"><img src="images/alco/logo-cliente.jpg" alt="">3</a>
+                                </div>
+                                <div class="item-carousel">
+                                    <a href="#"><img src="images/alco/logo-cliente.jpg" alt="">4</a>
+                                </div>
+                                <div class="item-carousel">
+                                    <a href="#"><img src="images/alco/logo-cliente.jpg" alt="">5</a>
+                                </div>
+                                <div class="item-carousel">
+                                    <a href="#"><img src="images/alco/logo-cliente.jpg" alt="">6</a>
+                                </div>
+                                <div class="item-carousel">
+                                    <a href="#"><img src="images/alco/logo-cliente.jpg" alt="">7</a>
+                                </div>
+                                <div class="item-carousel">
+                                    <a href="#"><img src="images/alco/logo-cliente.jpg" alt="">8</a>
+                                </div>
+                                <div class="item-carousel">
+                                    <a href="#"><img src="images/alco/logo-cliente.jpg" alt="">9</a>
+                                </div>
+                                <div class="item-carousel">
+                                    <a href="#"><img src="images/alco/logo-cliente.jpg" alt="">10</a>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -256,28 +267,16 @@
         <div class="container">
             
             <div class="row flex-row">
+                
                 <div class="col-md-4 col-xs-6">
                     
                     <!-- widget -->
                     <div class="widget">
-                        <h5 class="widget-title">Contáctanos</h5>
+                        <a href="index.html" class="logo"><img src="images/alco/logotipo-alco-mantenimiento-integral-playa-del-carmen-footer.png" alt=""></a>
                         <div class="content-element3">
-                            <p class="content-element1">Cancún - Playa - Tulum</p>
-                            <p class="content-element1"> Teléfonos: 984 120 1992 - 984 169 7805</p>
-                            <p class="content-element1">E-mail: <a href="mailto:alco@alcoplaya.com" class="link-text">alco@alcoplaya.com</a></p>
+                            <br><p class="content-element1">Alco es una empresa en Playa del Carmen, dedicada a ofrecer servicios de mantenimiento integral. Garantizando un servicio de calidad y con la seguridad de que es una empresa 100% responsable y profesional.</p>
+                            
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-xs-6">
-                    <!-- widget -->
-                    <div class="widget">
-                        <h5 class="widget-title">Servicios</h5>
-                        <ul class="info-links">
-                            <li><a href="#">Generales</a></li>
-                            <li><a href="#">Acabados</a></li>
-                            <li><a href="#">Obra civil</a></li>
-                            <li><a href="#">Arquitectura</a></li>
-                        </ul>
                     </div>
                 </div>
                 <div class="col-md-2 col-xs-6">
@@ -286,31 +285,40 @@
                         <h5 class="widget-title">Páginas</h5>
                         <ul class="info-links">
                             <li><a href="#">Inicio</a></li>
-                            <li><a href="#">Portafolio</a></li>
-                            <li><a href="#">Nosotros</a></li>
-                            <li><a href="#">Contacto</a></li>
+                            <li><a href="servicios.html">Servicios</a></li>
+                            <li><a href="portafolio.html">Portafolio</a></li>
+                            <li><a href="nosotros.html">Nosotros</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-6">
+                
+                <div class="col-md-3 col-xs-6">
                     
                     <!-- widget -->
                     <div class="widget">
-                        <h5 class="widget-title">Síguenos en</h5>
-                        <ul class="social-icons style-2">
-                            <li><a href="#"><i class="icon-facebook"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="widget">
-                        <h5 class="widget-title">Solicitar Cotización</h5>
-                        <div class="search-holder">
-                            <a href="#" class="btn btn-style-5"> Cotizador</a>
+                        <h5 class="widget-title">Contáctanos</h5>
+                        <div class="content-element3">
+                            <p class="content-element1"> 984 120 1992 - 984 169 7805</p>
+                            <p class="content-element1"><a href="mailto:alco@alcoplaya.com" class="link-text">alco@alcoplaya.com</a></p>
+                            <ul class="social-icons style-2">
+                                <li><a href="https://www.facebook.com/alcoplaya"><i class="icon-facebook"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="widget">
+                        <h5 class="widget-title">Solicita una cotización</h5>
+                        <div class="search-holder">
+                            <a href="#" class="btn btn-style-5"> Cotizar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             <div class="copyright">
-                <p>2018 © Alco. All Rights Reserved. | Web created with <span style="color: #C4355A">❤</span> by <a href="https://crealab.com.mx" class="link-text">Crealab</a></p>
+                <p>2018 © Alco. Todos los derechos reservador. | Sitio Web creado con <span style="color: #C4355A">❤</span> por <a href="https://crealab.com.mx" class="link-text">Crealab</a></p>
             </div>
         </div>
     </div>
