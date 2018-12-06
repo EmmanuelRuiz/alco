@@ -287,7 +287,7 @@ img.alignright{
 }
 
 .page-section-bg2{
-  background: #04518c;
+  background: #1998a6;
 }
 
 .page-section-bg2 .section-title,
@@ -1497,11 +1497,7 @@ button.search-button:before{content: "\e922";}
     }
 
 .breadcrumbs-wrap.style-2{
-  background: #04518c; /* Old browsers */
-  background: -moz-linear-gradient(left, #04518c 0%, #00a1d9 33%, #47d9bf 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #04518c 0%,#00a1d9 33%,#47d9bf 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #04518c 0%,#00a1d9 33%,#47d9bf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04518c', endColorstr='#47d9bf',GradientType=1 ); /* IE6-9 */
+  background: #1998a6; 
 }
 
 .breadcrumbs-wrap.style-3{
@@ -1749,7 +1745,7 @@ button.search-button:before{content: "\e922";}
 }
 
 [class*="scaption-dark"]{
-  color: #003056;
+  color: #2A4353;
 }
 
 [class*="scaption-white"]{
@@ -1963,7 +1959,7 @@ button.search-button:before{content: "\e922";}
   }
 
   [class*="btn"].btn-style-2{
-    background: #00a1d9;
+    background: #1998a6;
     color: #fff;
   }
 
