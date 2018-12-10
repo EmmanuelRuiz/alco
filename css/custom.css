@@ -17,3 +17,30 @@
 .box-shadow-header{
 	box-shadow: 0px 2px 25px -5px #888888;
 }
+
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+
+.thumbnail a>img, .thumbnail>img {
+    margin-right: auto;
+    margin-left: auto;
+}
+.thumbnail .caption {
+    padding: 9px;
+    color: #333;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
