@@ -23,12 +23,12 @@
     <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.css">
     <!-- CSS theme files
     ============================================ -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
@@ -141,23 +141,70 @@
     <!-- - - - - - - - - - - - - end Breadcrumbs - - - - - - - - - - - - - - - -->
     <!-- - - - - - - - - - - - - - Content - - - - - - - - - - - - - - - - -->
     <div id="content" class="page-content-wrap">
-        
         <div class="container">
             <!-- - - - - - - - - - - - - - Filter - - - - - - - - - - - - - - - - -->
-            <div id="options">
-                <div id="filters" class="isotope-nav">
-                    <button class="is-checked" data-filter="*">All</button>
-                    <button data-filter=".category_2">Heating</button>
-                    <button data-filter=".category_3">Cooling</button>
-                    <button data-filter=".category_4">Plumbing</button>
-                    <button data-filter=".category_5">Air Quality</button>
-                    <button data-filter=".category_6">Electrical</button>
-                </div>
+            <div class="btn-group" style="margin-bottom: 3%;">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Filtros <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                    <div id="options">
+                        <div id="filters" class="isotope-nav">
+                            <ul class="list-group" style="width: 100%;">
+                                <li class="list-group-item">
+                                    <span class="badge">22</span>
+                                    <button class="is-checked" data-filter="*">Todos</button>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="badge">3</span>
+                                    <button data-filter=".category_2">Arquitectura</button>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="badge">3</span>
+                                    <button data-filter=".category_3">Obra Civil</button>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="badge">2</span>
+                                    <button data-filter=".category_4">Acabados</button>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="badge">2</span>
+                                    <button data-filter=".category_5">Instalaciones hidráulicas y sanitarias</button>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="badge">1</span>
+                                    <button data-filter=".category_6">Instalaciones Eléctricas</button>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="badge">2</span>
+                                    <button data-filter="*">Albercas</button>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="badge">1</span>
+                                    <button data-filter="*">Fumigación</button>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="badge">1</span>
+                                    <button data-filter="*">Aires Acondicionados</button>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="badge">3</span>
+                                    <button data-filter="*">Instalaciones de Gas</button>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="badge">2</span>
+                                    <button data-filter="*">Palapas y Pergolas</button>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="badge">2</span>
+                                    <button data-filter="*">Mantenimiento de electrodomésticos</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </ul>
             </div>
             <!-- - - - - - - - - - - - - - End of Filter - - - - - - - - - - - - - - - - -->
             <div class="isotope three-collumn clearfix portfolio-holder" data-isotope-options='{"itemSelector" : ".item","layoutMode" : "masonry","transitionDuration":"0.7s","masonry" : {"columnWidth":".item"}}'>
                 <div class="item category_5">
-                    
                     <!-- - - - - - - - - - - - - - Project - - - - - - - - - - - - - - - - -->
                     <div class="project">
                         <!-- - - - - - - - - - - - - - Project Image - - - - - - - - - - - - - - - - -->
@@ -174,12 +221,51 @@
                             <!-- - - - - - - - - - - - - - End of Project Description - - - - - - - - - - - - - - - - -->
                         </div>
                         <!-- - - - - - - - - - - - - - End of Project Image - - - - - - - - - - - - - - - - -->
+                    </div>
+                    <!-- - - - - - - - - - - - - - End of Project - - - - - - - - - - - - - - - - -->
+                </div>
+                <div class="item category_2">
+                    <!-- - - - - - - - - - - - - - Project - - - - - - - - - - - - - - - - -->
+                    <div class="project">
+                        <!-- - - - - - - - - - - - - - Project Image - - - - - - - - - - - - - - - - -->
+                        <div class="project-image">
+                            <img src="images/360x260_img4.jpg" alt="">
+                            <a href="images/360x260_img4.jpg" class="project-link" data-fancybox="group"></a>
+                            <!-- - - - - - - - - - - - - - Project Description - - - - - - - - - - - - - - - - -->
+                            <div class="project-description">
+                                <h4 class="project-title"><a href="#">Mauris Fermentum Dictum</a></h4>
+                                <ul class="project-cats">
+                                    <li><a href="#">Cooling</a></li>
+                                </ul>
+                            </div>
+                            <!-- - - - - - - - - - - - - - End of Project Description - - - - - - - - - - - - - - - - -->
+                        </div>
+                        <!-- - - - - - - - - - - - - - End of Project Image - - - - - - - - - - - - - - - - -->
                         
                     </div>
                     <!-- - - - - - - - - - - - - - End of Project - - - - - - - - - - - - - - - - -->
                 </div>
+                <div class="item category_5">
+                    <!-- - - - - - - - - - - - - - Project - - - - - - - - - - - - - - - - -->
+                    <div class="project">
+                        <!-- - - - - - - - - - - - - - Project Image - - - - - - - - - - - - - - - - -->
+                        <div class="project-image">
+                            <img src="images/360x460_img1.jpg" alt="">
+                            <a href="images/360x460_img1.jpg" class="project-link" data-fancybox="group"></a>
+                            <!-- - - - - - - - - - - - - - Project Description - - - - - - - - - - - - - - - - -->
+                            <div class="project-description">
+                                <h4 class="project-title"><a href="#">Sed Laoreet Aliquam Leo</a></h4>
+                                <ul class="project-cats">
+                                    <li><a href="#">Air Quality</a></li>
+                                </ul>
+                            </div>
+                            <!-- - - - - - - - - - - - - - End of Project Description - - - - - - - - - - - - - - - - -->
+                        </div>
+                        <!-- - - - - - - - - - - - - - End of Project Image - - - - - - - - - - - - - - - - -->
+                    </div>
+                    <!-- - - - - - - - - - - - - - End of Project - - - - - - - - - - - - - - - - -->
+                </div>
                 <div class="item category_3">
-                    
                     <!-- - - - - - - - - - - - - - Project - - - - - - - - - - - - - - - - -->
                     <div class="project">
                         <!-- - - - - - - - - - - - - - Project Image - - - - - - - - - - - - - - - - -->
@@ -201,7 +287,6 @@
                     <!-- - - - - - - - - - - - - - End of Project - - - - - - - - - - - - - - - - -->
                 </div>
                 <div class="item category_6">
-                    
                     <!-- - - - - - - - - - - - - - Project - - - - - - - - - - - - - - - - -->
                     <div class="project">
                         <!-- - - - - - - - - - - - - - Project Image - - - - - - - - - - - - - - - - -->
@@ -245,7 +330,6 @@
                     <!-- - - - - - - - - - - - - - End of Project - - - - - - - - - - - - - - - - -->
                 </div>
                 <div class="item category_4">
-                    
                     <!-- - - - - - - - - - - - - - Project - - - - - - - - - - - - - - - - -->
                     <div class="project">
                         <!-- - - - - - - - - - - - - - Project Image - - - - - - - - - - - - - - - - -->
@@ -267,7 +351,6 @@
                     <!-- - - - - - - - - - - - - - End of Project - - - - - - - - - - - - - - - - -->
                 </div>
                 <div class="item category_2">
-                    
                     <!-- - - - - - - - - - - - - - Project - - - - - - - - - - - - - - - - -->
                     <div class="project">
                         <!-- - - - - - - - - - - - - - Project Image - - - - - - - - - - - - - - - - -->
@@ -284,12 +367,30 @@
                             <!-- - - - - - - - - - - - - - End of Project Description - - - - - - - - - - - - - - - - -->
                         </div>
                         <!-- - - - - - - - - - - - - - End of Project Image - - - - - - - - - - - - - - - - -->
-                        
+                    </div>
+                    <!-- - - - - - - - - - - - - - End of Project - - - - - - - - - - - - - - - - -->
+                </div>
+                <div class="item category_2">
+                    <!-- - - - - - - - - - - - - - Project - - - - - - - - - - - - - - - - -->
+                    <div class="project">
+                        <!-- - - - - - - - - - - - - - Project Image - - - - - - - - - - - - - - - - -->
+                        <div class="project-image">
+                            <img src="images/360x260_img4.jpg" alt="">
+                            <a href="images/360x260_img4.jpg" class="project-link" data-fancybox="group"></a>
+                            <!-- - - - - - - - - - - - - - Project Description - - - - - - - - - - - - - - - - -->
+                            <div class="project-description">
+                                <h4 class="project-title"><a href="#">Mauris Fermentum Dictum</a></h4>
+                                <ul class="project-cats">
+                                    <li><a href="#">Cooling</a></li>
+                                </ul>
+                            </div>
+                            <!-- - - - - - - - - - - - - - End of Project Description - - - - - - - - - - - - - - - - -->
+                        </div>
+                        <!-- - - - - - - - - - - - - - End of Project Image - - - - - - - - - - - - - - - - -->
                     </div>
                     <!-- - - - - - - - - - - - - - End of Project - - - - - - - - - - - - - - - - -->
                 </div>
                 <div class="item category_3">
-                    
                     <!-- - - - - - - - - - - - - - Project - - - - - - - - - - - - - - - - -->
                     <div class="project">
                         <!-- - - - - - - - - - - - - - Project Image - - - - - - - - - - - - - - - - -->
@@ -306,12 +407,10 @@
                             <!-- - - - - - - - - - - - - - End of Project Description - - - - - - - - - - - - - - - - -->
                         </div>
                         <!-- - - - - - - - - - - - - - End of Project Image - - - - - - - - - - - - - - - - -->
-                        
                     </div>
                     <!-- - - - - - - - - - - - - - End of Project - - - - - - - - - - - - - - - - -->
                 </div>
                 <div class="item category_3">
-                    
                     <!-- - - - - - - - - - - - - - Project - - - - - - - - - - - - - - - - -->
                     <div class="project">
                         <!-- - - - - - - - - - - - - - Project Image - - - - - - - - - - - - - - - - -->
@@ -328,36 +427,11 @@
                             <!-- - - - - - - - - - - - - - End of Project Description - - - - - - - - - - - - - - - - -->
                         </div>
                         <!-- - - - - - - - - - - - - - End of Project Image - - - - - - - - - - - - - - - - -->
-                        
                     </div>
                     <!-- - - - - - - - - - - - - - End of Project - - - - - - - - - - - - - - - - -->
                 </div>
-                <div class="item category_3 category_2">
-                    
-                    <!-- - - - - - - - - - - - - - Project - - - - - - - - - - - - - - - - -->
-                    <div class="project">
-                        <!-- - - - - - - - - - - - - - Project Image - - - - - - - - - - - - - - - - -->
-                        <div class="project-image">
-                            <img src="images/360x260_img2.jpg" alt="">
-                            <a href="images/360x260_img2.jpg" class="project-link" data-fancybox="group"></a>
-                            <!-- - - - - - - - - - - - - - Project Description - - - - - - - - - - - - - - - - -->
-                            <div class="project-description">
-                                <h4 class="project-title"><a href="#">Neque Porro Quisquam Est</a></h4>
-                                <ul class="project-cats">
-                                    <li><a href="#">Cooling</a></li>,
-                                    <li><a href="#">Heating</a></li>
-                                </ul>
-                            </div>
-                            <!-- - - - - - - - - - - - - - End of Project Description - - - - - - - - - - - - - - - - -->
-                        </div>
-                        <!-- - - - - - - - - - - - - - End of Project Image - - - - - - - - - - - - - - - - -->
-                        
-                    </div>
-                    <!-- - - - - - - - - - - - - - End of Project - - - - - - - - - - - - - - - - -->
-                </div>
-                
+
             </div>
-            
         </div>
     </div>
     <!-- - - - - - - - - - - - - end Content - - - - - - - - - - - - - - - -->
@@ -431,6 +505,7 @@
 <script src="js/libs/jquery.modernizr.js"></script>
 <script src="js/libs/jquery-2.2.4.min.js"></script>
 <script src="js/libs/jquery-ui.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
 <script src="js/libs/retina.min.js"></script>
 <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
 <script src="plugins/isotope.pkgd.min.js"></script>
