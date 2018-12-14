@@ -1,3 +1,21 @@
+/* Clases de Ayuda*/
+
+.pull-right {
+  float: right !important;
+}
+
+#btn-add{
+    padding-left: 20% !important;
+    padding-right: 20% !important;
+    margin-top: 28px !important;
+    background: green;
+    margin: auto;
+    display: block;
+}
+#btn-add:hover{
+    background: green;
+}
+
 /* Index */
 
 #btn-send{
@@ -69,4 +87,17 @@
 .list-group {
     padding-left: 0;
     margin-bottom: 0px !important;
+}
+
+
+/* Cotizador */
+
+.checkbox-inline, .radio-inline {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    vertical-align: middle;
+    cursor: pointer;
 }
