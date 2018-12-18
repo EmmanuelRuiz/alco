@@ -4,17 +4,46 @@
   float: right !important;
 }
 
-#btn-add{
+.add_button{
     padding-left: 20% !important;
     padding-right: 20% !important;
     margin-top: 28px !important;
-    background: green;
+    background: green !important;
     margin: auto;
     display: block;
 }
-#btn-add:hover{
-    background: green;
+
+.add_button:hover{
+    background: green !important;
 }
+
+.remove_button{
+    padding-left: 20% !important;
+    padding-right: 20% !important;
+    margin-top: 28px !important;
+    background: red !important;
+    margin: auto;
+    display: block;
+}
+
+.remove_button:hover{
+    background-color: red !important;
+}
+
+.text-info{
+    color: #31708f;
+}
+
+.mb-0{
+    margin-bottom: 0 !important;
+}
+
+.mt-20{
+    margin-top: 20px !important;
+}
+
+
+/* Clases de Ayuda Fin*/
 
 /* Index */
 

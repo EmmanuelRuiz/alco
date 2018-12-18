@@ -193,8 +193,9 @@
             
             <div class="field_wrapper">
               <form class="contact-form">
-                
+                <p class="mb-0 mt-20">Pared 1</p>
                 <div class="row flex-row">
+
                   <div class="col-xs-4">
                     <label class="required">Largo</label>
                     <input type="text">
@@ -207,13 +208,32 @@
                     <button type="button" class="btn btn-default add_button">+</button>
                   </div>
                 </div>
-                <div class="row">
+                
+              </form>
+
+              <div class="row">
                   <div class="col-sm-12">
-                    <button type="button" class="btn btn-default mt-20" id="btn-avanzar">Avanzar</button>
+                    <button type="button" class="btn btn-default" id="btn-avanzar">Avanzar</button>
                   </div>
                 </div>
-              </form>
-            </div>
+            </div><br>
+
+            <div class="row flex-row">
+                  <div class="col-sm-12">
+                    
+                    <label class="required">¿Qué tipo de pintura deseas usar?</label>
+                    <div class="custom-select">
+                      <div class="select-title">Seleccionar pintura</div>
+                      <ul id="menu-type" class="select-list"></ul>
+                      <select class="hide">
+                        <option value="menu">Comex - $178 MX</option>
+                        <option value="menu">Mapla - $158 MX</option>
+                        <option value="menu">Boxito - $128 MX</option>
+                      </select>
+                    </div>
+
+                  </div>
+                </div>
             <hr>
           </div>
         </main>
