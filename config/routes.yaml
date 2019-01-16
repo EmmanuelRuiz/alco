@@ -18,3 +18,46 @@ contacto:
   path: /alco-informacion-de-contacto
   controller: App\Controller\PagesController::contacto
 
+services_arquitectura:
+  path: /servicios/servicio-de-arquitectura-por-alco
+  controller: App\Controller\PagesController::arquitectura
+
+services_obra_civil:
+  path: /servicios/servicio-de-obra-civil-por-alco
+  controller: App\Controller\PagesController::obraCivil
+
+services_acabados:
+  path: /servicios/servicio-de-acabados-por-alco
+  controller: App\Controller\PagesController::acabados
+
+services_hidraulicas_sanitarias:
+  path: /servicios/servicio-de-instalaciones-hidraulicas-y-sanitarias-por-alco
+  controller: App\Controller\PagesController::hidraulicasSanitarias
+
+services_instalaciones_electricas:
+  path: /servicios/servicio-de-instalaciones-electricas-por-alco
+  controller: App\Controller\PagesController::instalacionesElectricas
+
+services_albercas:
+  path: /servicios/servicio-de-albercas-por-alco
+  controller: App\Controller\PagesController::albercas
+
+services_fumigacion:
+  path: /servicios/servicio-de-fumigacion-por-alco
+  controller: App\Controller\PagesController::fumigacion
+
+services_aires_acondicionados:
+  path: /servicios/servicio-de-aires-acondicionados-por-alco
+  controller: App\Controller\PagesController::airesAcondicionados
+
+services_instalaciones_gas:
+  path: /servicios/servicio-de-instalaciones-de-gas-por-alco
+  controller: App\Controller\PagesController::instalacionesGas
+
+services_palapas_pergolas:
+  path: /servicios/servicio-de-palapas-y-pergolas-por-alco
+  controller: App\Controller\PagesController::palapasPergolas
+
+services_electrodomesticos:
+  path: /servicios/servicio-de-mantenimiento-de-electrodomesticos-por-alco
+  controller: App\Controller\PagesController::electrodomesticos

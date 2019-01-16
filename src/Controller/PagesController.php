@@ -7,9 +7,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PagesController extends AbstractController
 {
-    /**
-     * @Route("/pages", name="pages")
-     */
     public function index(){
         return $this->render('pages/index.html.twig', [
             'controller_name' => 'PagesController',
@@ -30,5 +27,49 @@ class PagesController extends AbstractController
 
     public function contacto(){
     	return $this->render('pages/contacto.html.twig');
+    }
+
+    public function arquitectura(){
+    	return $this->render('pages/servicios/arquitectura.html.twig');
+    }
+
+    public function obraCivil(){
+    	return $this->render('pages/servicios/obra-civil.html.twig');
+    }
+
+    public function acabados(){
+    	return $this->render('pages/servicios/acabados.html.twig');
+    }
+
+    public function hidraulicasSanitarias(){
+    	return $this->render('pages/servicios/hidraulicas-sanitarias.html.twig');
+    }
+
+    public function instalacionesElectricas(){
+    	return $this->render('pages/servicios/instalaciones-electricas.html.twig');
+    }
+
+    public function albercas(){
+    	return $this->render('pages/servicios/albercas.html.twig');
+    }
+
+    public function fumigacion(){
+    	return $this->render('pages/servicios/fumigacion.html.twig');
+    }
+
+    public function airesAcondicionados(){
+    	return $this->render('pages/servicios/aires-acondicionados.html.twig');
+    }
+
+    public function instalacionesGas(){
+    	return $this->render('pages/servicios/instalaciones-de-gas.html.twig');
+    }
+
+    public function palapasPergolas(){
+    	return $this->render('pages/servicios/palapas-pergolas.html.twig');
+    }
+
+    public function electrodomesticos(){
+    	return $this->render('pages/servicios/electrodomesticos.html.twig');
     }
 }
