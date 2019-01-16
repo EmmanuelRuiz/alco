@@ -1,3 +1,20 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+  path: /
+  controller: App\Controller\PagesController::index
+
+services:
+  path: /servicios-de-mantenimiento-integral-por-alco
+  controller: App\Controller\PagesController::servicios
+
+portfolio:
+  path: /trabajos-realizados-por-alco
+  controller: App\Controller\PagesController::portafolio
+
+about:
+  path: /acerca-de-alco-mantenimiento-integral
+  controller: App\Controller\PagesController::nosotros
+
+contacto:
+  path: /alco-informacion-de-contacto
+  controller: App\Controller\PagesController::contacto
+
