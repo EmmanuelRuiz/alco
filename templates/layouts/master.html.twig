@@ -4,17 +4,14 @@
 		<title>{% block title %} {% endblock %}</title>
 		{% block metatags %} {% endblock %}
 		{% block googlescripts %} {% endblock %}
-
 		<link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Oswald:400,700" rel="stylesheet">
-
 		<link rel="stylesheet" href="{{ asset('assets/font/demo-files/demo.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/font/custom/styles.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/plugins/fancybox/jquery.fancybox.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/plugins/revolution/css/settings.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/plugins/revolution/css/layers.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/plugins/revolution/css/navigation.css') }}">
-		<!-- CSS theme files
-		============================================ -->
+		<!-- css -->
 		<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/fontello.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css') }}">
@@ -24,10 +21,85 @@
 	</head>
 	<body>
 
+		<div class="loader"></div>
+	    <div id="wrapper" class="wrapper-container">
+	       
+	    <nav id="mobile-advanced" class="mobile-advanced"></nav>
+	    
+		<header id="header" class="header style-3 sticky-header">
+			<div class="searchform-wrap">
+				<div class="vc-child h-inherit">
+					<form>
+						<button type="submit" class="btn btn-style-5">Buscar</button>
+						<div class="wrapper">
+							<input type="text" name="search" placeholder="Start typing...">
+						</div>
+					</form>
+					<button class="close-search-form"></button>
+				</div>
+			</div>
+			<div class="pre-header">
+				
+				<div class="container extra-width">
+					<div class="flex-row flex-justify">
+						<ul class="menu-list">
+							<li><i class="licon-clock3"></i> L - V: 9:00 - 17:00 hrs / S: 9:00 - 14:00 hrs</li>
+							<li><i class="licon-map-marker"></i> Playa del Carmen - Cancún - Tulúm</li>
+						</ul>
+						<ul class="social-icons">
+							<li><a href="mailto:alco@alcoplaya.com"><i class=" icon-mail"></i> alco@alcoplaya.com</a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-whatsapp"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="top-header">
+				<div class="container extra-width">
+					<div class="flex-row flex-justify flex-center">
+						<div class="logo-wrap">
+							<a href="index.html" class="logo"><img src="images/alco/logotipo-alco-mantenimiento-integral-playa-del-carmen.png" alt=""></a>
+						</div>
+						<ul class="contact-info">
+							<li class="info-item">
+								<i class="licon-telephone2"></i>
+								<div class="item-info">
+									<span>Llámanos</span>
+									<h4>984 120 1992 - 984 169 7805</h4>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="menu-holder">
+				
+				<div class="container extra-width">
+					
+					<div class="menu-wrap">
+						<div class="nav-item flex-row flex-justify flex-center">
+							
+							<nav id="main-navigation" class="main-navigation">
+								<ul id="menu" class="clearfix">
+									<li class="current  "><a href="index.html">Inicio</a></li>
+									<li class=""><a href="servicios.html">Servicios</a></li>
+									<li class=""><a href="portafolio.html">Portafolio</a> </li>
+									<li class=""><a href="nosotros.html">Nosotros</a> </li>
+									<li class=""><a href="contacto.html">Contacto</a> </li>
+								</ul>
+							</nav>
+							
+							<div class="search-holder">
+								<a href="cotizador.html" class="btn btn-style-5"> Cotizador</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
 		{% block body %}
-
 		{% endblock %}
-
 		<footer id="footer" class="footer style-2">
 			<div class="main-footer">
 				<div class="container">
@@ -106,4 +178,4 @@
 		<script src="{{ asset('assets/js/plugins.js') }}"></script>
 		<script src="{{ asset('assets/js/script.js') }} "></script>
 	</body>
-	</html>
+</html>
