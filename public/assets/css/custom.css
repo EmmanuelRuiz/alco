@@ -1,0 +1,132 @@
+/* Clases de Ayuda*/
+
+.pull-right {
+  float: right !important;
+}
+
+.add_button{
+    padding-left: 20% !important;
+    padding-right: 20% !important;
+    margin-top: 28px !important;
+    background: green !important;
+    margin: auto;
+    display: block;
+}
+
+.add_button:hover{
+    background: green !important;
+}
+
+.remove_button{
+    padding-left: 20% !important;
+    padding-right: 20% !important;
+    margin-top: 28px !important;
+    background: red !important;
+    margin: auto;
+    display: block;
+}
+
+.remove_button:hover{
+    background-color: red !important;
+}
+
+.text-info{
+    color: #31708f;
+}
+
+.mb-0{
+    margin-bottom: 0 !important;
+}
+
+.mt-20{
+    margin-top: 20px !important;
+}
+
+
+/* Clases de Ayuda Fin*/
+
+/* Index */
+
+#btn-send{
+	background: #2A4353 !important;
+}
+
+#btn-send:hover{
+	background: #3b5363 !important;
+}
+
+.icon-p{
+	position: absolute;
+    left: 0;
+    width: 15% !important;
+}
+
+.box-shadow-header{
+	box-shadow: 0px 2px 25px -5px #888888;
+}
+
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+
+.thumbnail a>img, .thumbnail>img {
+    margin-right: auto;
+    margin-left: auto;
+}
+.thumbnail .caption {
+    padding: 9px;
+    color: #333;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 350px;
+    padding: 0px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    background-clip: padding-box;
+}
+
+.list-group {
+    padding-left: 0;
+    margin-bottom: 0px !important;
+}
+
+
+/* Cotizador */
+
+.checkbox-inline, .radio-inline {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    vertical-align: middle;
+    cursor: pointer;
+}
