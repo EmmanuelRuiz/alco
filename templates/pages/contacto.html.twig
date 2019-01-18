@@ -1,0 +1,120 @@
+{% extends 'layouts/master.html.twig' %}
+{% block title %} Contacto {% endblock %}
+{% block metatags %}
+	<meta charset="utf-8">
+	<meta name="author" content="Crealab.com.mx">
+	<meta name="keywords" content="empresa de servicio y mantenimiento, servicio de mantenimiento y limpieza, empresa de mantenimiento, mantenimiento de edificación, mantenimiento y reparación, Mantenimiento general">
+	<meta name="description" content="Realizamos servicio y mantenimiento para todo tipo de edificación como casas habitación, oficinas, negocios, comercios, condominios, hoteles y espacios habitables en general.">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+{% endblock %}
+{% block body %}
+	<div class="breadcrumbs-wrap style-2">
+		<div class="container">
+			
+			<h1 class="page-title">Contáctanos</h1>
+		</div>
+	</div>
+	<div id="content" class="page-content-wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					
+					<h2 class="section-title">Detalles de contacto</h2>
+					<div class="content-element4">
+						<ul class="contact-info v-type">
+							<li class="info-item">
+								<i class="licon-map-marker"></i>
+								<div class="item-info">
+									<span>Cancún - Playa - Tulum</span>
+								</div>
+							</li>
+							<li class="info-item">
+								<i class="licon-telephone2"></i>
+								<div class="item-info">
+									<span>Teléfono:</span>
+									<a href="#">984 120 1992</a>
+									<a href="#">984 169 7805</a>
+								</div>
+							</li>
+							<li class="info-item">
+								<i class="licon-at-sign"></i>
+								<div class="item-info">
+									<span>E-mail:</span>
+									<a href="mailto:alco@alcoplaya.com">alco@alcoplaya.com</a>
+								</div>
+							</li>
+							<li class="info-item">
+								<i class="licon-clock3"></i>
+								<div class="item-info">
+									<span>Horario 8am - 5pm: <br>  Lunes - Sábado</span>
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+					<ul class="social-icons style-2">
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-sm-8">
+					
+					<h2>Escríbenos</h2>
+					<p>Respondemos tu mensaje lo más rápido posible, estaremos encantados de ayudar.</p>
+					<form id="contact-form" class="contact-form">
+						<div class="row flex-row">
+							<div class="col-xs-6">
+								
+								<label class="required">Nombre</label>
+								<input name="cf-name" type="text">
+								
+							</div>
+							<div class="col-xs-6">
+								
+								<label class="required">Apellido</label>
+								<input type="text" name="cf-name" required>
+								
+							</div>
+						</div>
+						<div class="row flex-row">
+							<div class="col-xs-6">
+								
+								<label class="required">E-mail</label>
+								<input name="cf-email" type="email" required>
+								
+							</div>
+							<div class="col-xs-6">
+								
+								<label class="required">Teléfono</label>
+								<input type="tel" name="cf-phone" required>
+								
+							</div>
+						</div>
+						<div class="row flex-row">
+							<div class="col-sm-12">
+								<label class="required">Ciudad</label>
+								<input type="text" name="cf-city" required>
+							</div>
+						</div>
+						<div class="row flex-row">
+							<div class="col-sm-12">
+								
+								<label class="required">Comentarios</label>
+								<textarea rows="5" name="cf-message"></textarea>
+							</div>
+						</div>
+						<div class="row flex-row">
+							<div class="col-sm-12">
+								<button type="submit" class="btn btn-style-5" data-type="submit">Enviar mensaje</button>
+								
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="map-section">
+		<div id="googleMap" class="map-container"></div>
+	</div>
+{% endblock %}
