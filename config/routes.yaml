@@ -18,6 +18,10 @@ contacto:
   path: /alco-informacion-de-contacto
   controller: App\Controller\PagesController::contacto
 
+cotizador:
+  path: /cotiza-tu-servicio
+  controller: App\Controller\CotizadorController::cotizador
+
 services_arquitectura:
   path: /servicios/servicio-de-arquitectura-por-alco
   controller: App\Controller\PagesController::arquitectura
