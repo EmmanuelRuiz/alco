@@ -1,0 +1,313 @@
+{% extends 'layouts/master.html.twig' %}
+{% block title %} Alco | Servicio y Mantenimiento Integral en Playa del Carmen, Cancún y Tulum {% endblock %}
+{% block metatags %}
+	<meta charset="utf-8">
+	<meta name="author" content="Crealab.com.mx">
+	<meta name="keywords" content="empresa de servicio y mantenimiento, servicio de mantenimiento y limpieza, empresa de mantenimiento, mantenimiento de edificación, mantenimiento y reparación, Mantenimiento general">
+	<meta name="description" content="Realizamos servicio y mantenimiento para todo tipo de edificación como casas habitación, oficinas, negocios, comercios, condominios, hoteles y espacios habitables en general.">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+{% endblock %}
+{% block body %}
+	<div class="breadcrumbs-wrap style-3">
+		<div class="container">
+			<h1 class="page-title">Portafolio</h1>
+			<ul class="breadcrumbs">
+				<li>Estos son algunos de nuestros trabajos realizados</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="content" class="page-content-wrap">
+		<div class="container">
+			
+			<div class="btn-group" style="margin-bottom: 3%;">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Filtros <span class="caret"></span></button>
+				<ul class="dropdown-menu" role="menu">
+					<div id="options">
+						<div id="filters" class="isotope-nav">
+							<ul class="list-group" style="width: 100%;">
+								<li class="list-group-item">
+									<span class="badge">22</span>
+									<button class="is-checked" data-filter="*">Todos</button>
+								</li>
+								<li class="list-group-item">
+									<span class="badge">3</span>
+									<button data-filter=".category_2">Arquitectura</button>
+								</li>
+								<li class="list-group-item">
+									<span class="badge">3</span>
+									<button data-filter=".category_3">Obra Civil</button>
+								</li>
+								<li class="list-group-item">
+									<span class="badge">2</span>
+									<button data-filter=".category_4">Acabados</button>
+								</li>
+								<li class="list-group-item">
+									<span class="badge">2</span>
+									<button data-filter=".category_5">Instalaciones hidráulicas y sanitarias</button>
+								</li>
+								<li class="list-group-item">
+									<span class="badge">1</span>
+									<button data-filter=".category_6">Instalaciones Eléctricas</button>
+								</li>
+								<li class="list-group-item">
+									<span class="badge">2</span>
+									<button data-filter="*">Albercas</button>
+								</li>
+								<li class="list-group-item">
+									<span class="badge">1</span>
+									<button data-filter="*">Fumigación</button>
+								</li>
+								<li class="list-group-item">
+									<span class="badge">1</span>
+									<button data-filter="*">Aires Acondicionados</button>
+								</li>
+								<li class="list-group-item">
+									<span class="badge">3</span>
+									<button data-filter="*">Instalaciones de Gas</button>
+								</li>
+								<li class="list-group-item">
+									<span class="badge">2</span>
+									<button data-filter="*">Palapas y Pergolas</button>
+								</li>
+								<li class="list-group-item">
+									<span class="badge">2</span>
+									<button data-filter="*">Mantenimiento de electrodomésticos</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</ul>
+			</div>
+			
+			<div class="isotope three-collumn clearfix portfolio-holder" data-isotope-options='{"itemSelector" : ".item","layoutMode" : "masonry","transitionDuration":"0.7s","masonry" : {"columnWidth":".item"}}'>
+				<div class="item category_5">
+					
+					<div class="project">
+						
+						<div class="project-image">
+							<img src="{{ asset('assets/images/360x460_img1.jpg') }}" alt="">
+							<a href="{{ asset('assets/images/360x460_img1.jpg') }}" class="project-link" data-fancybox="group"></a>
+							
+							<div class="project-description">
+								<h4 class="project-title"><a href="#">Sed Laoreet Aliquam Leo</a></h4>
+								<ul class="project-cats">
+									<li><a href="#">Air Quality</a></li>
+								</ul>
+							</div>
+							
+						</div>
+						
+					</div>
+				</div>
+				<div class="item category_2">
+					
+					<div class="project">
+						
+						<div class="project-image">
+							<img src="{{ asset('assets/images/360x260_img4.jpg') }}" alt="">
+							<a href="{{ asset('assets/images/360x260_img4.jpg') }}" class="project-link" data-fancybox="group"></a>
+							
+							<div class="project-description">
+								<h4 class="project-title"><a href="#">Mauris Fermentum Dictum</a></h4>
+								<ul class="project-cats">
+									<li><a href="#">Cooling</a></li>
+								</ul>
+							</div>
+							
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="item category_5">
+					
+					<div class="project">
+						
+						<div class="project-image">
+							<img src="{{ asset('assets/images/360x460_img1.jpg') }}" alt="">
+							<a href="{{ asset('assets/images/360x460_img1.jpg') }}" class="project-link" data-fancybox="group"></a>
+							
+							<div class="project-description">
+								<h4 class="project-title"><a href="#">Sed Laoreet Aliquam Leo</a></h4>
+								<ul class="project-cats">
+									<li><a href="#">Air Quality</a></li>
+								</ul>
+							</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="item category_3">
+					
+					<div class="project">
+						
+						<div class="project-image">
+							<img src="{{ asset('assets/images/360x260_img4.jpg') }}" alt="">
+							<a href="{{ asset('assets/images/360x260_img4.jpg') }}" class="project-link" data-fancybox="group"></a>
+							
+							<div class="project-description">
+								<h4 class="project-title"><a href="#">Mauris Fermentum Dictum</a></h4>
+								<ul class="project-cats">
+									<li><a href="#">Cooling</a></li>
+								</ul>
+							</div>
+							
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="item category_6">
+					
+					<div class="project">
+						
+						<div class="project-image">
+							<img src="{{ asset('assets/images/360x360_img1.jpg') }}" alt="">
+							<a href="{{ asset('assets/images/360x360_img1.jpg') }}" class="project-link" data-fancybox="group"></a>
+							
+							<div class="project-description">
+								<h4 class="project-title"><a href="#">Ut Enim ad Minima</a></h4>
+								<ul class="project-cats">
+									<li><a href="#">Electrical</a></li>
+								</ul>
+							</div>
+							
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="item category_4">
+					
+					
+					<div class="project">
+						
+						<div class="project-image">
+							<img src="{{ asset('assets/images/360x460_img2.jpg') }}" alt="">
+							<a href="{{ asset('assets/images/360x460_img2.jpg') }}" class="project-link" data-fancybox="group"></a>
+							
+							<div class="project-description">
+								<h4 class="project-title"><a href="#">Quisque Diam Lorem</a></h4>
+								<ul class="project-cats">
+									<li><a href="#">Plumbing</a></li>
+								</ul>
+							</div>
+							
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="item category_4">
+					
+					<div class="project">
+						
+						<div class="project-image">
+							<img src="{{ asset('assets/images/360x260_img3.jpg') }}" alt="">
+							<a href="{{ asset('assets/images/360x260_img3.jpg') }}" class="project-link" data-fancybox="group"></a>
+							
+							<div class="project-description">
+								<h4 class="project-title"><a href="#">Donec Eget Tellus</a></h4>
+								<ul class="project-cats">
+									<li><a href="#">Plumbing</a></li>
+								</ul>
+							</div>
+							
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="item category_2">
+					
+					<div class="project">
+						
+						<div class="project-image">
+							<img src="{{ asset('assets/images/360x360_img2.jpg') }}" alt="">
+							<a href="{{ asset('assets/images/360x360_img2.jpg') }}" class="project-link" data-fancybox="group"></a>
+							
+							<div class="project-description">
+								<h4 class="project-title"><a href="#">Ut Tellus Dolor Dapibus</a></h4>
+								<ul class="project-cats">
+									<li><a href="#">Heating</a></li>
+								</ul>
+							</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="item category_2">
+					
+					<div class="project">
+						
+						<div class="project-image">
+							<img src="{{ asset('assets/images/360x260_img4.jpg') }}" alt="">
+							<a href="{{ asset('assets/images/360x260_img4.jpg') }}" class="project-link" data-fancybox="group"></a>
+							
+							<div class="project-description">
+								<h4 class="project-title"><a href="#">Mauris Fermentum Dictum</a></h4>
+								<ul class="project-cats">
+									<li><a href="#">Cooling</a></li>
+								</ul>
+							</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="item category_3">
+					
+					<div class="project">
+						
+						<div class="project-image">
+							<img src="{{ asset('assets/images/360x460_img3.jpg') }}" alt="">
+							<a href="{{ asset('assets/images/360x460_img3.jpg') }}" class="project-link" data-fancybox="group"></a>
+							
+							<div class="project-description">
+								<h4 class="project-title"><a href="#">Mauris Fermentum Dictum</a></h4>
+								<ul class="project-cats">
+									<li><a href="#">Cooling</a></li>
+								</ul>
+							</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="item category_3">
+					
+					<div class="project">
+						
+						<div class="project-image">
+							<img src="{{ asset('assets/images/360x360_img3.jpg') }}" alt="">
+							<a href="{{ asset('assets/images/360x360_img3.jpg') }}" class="project-link" data-fancybox="group"></a>
+							
+							<div class="project-description">
+								<h4 class="project-title"><a href="#">Nemo Enim Ipsam Voluptatem</a></h4>
+								<ul class="project-cats">
+									<li><a href="#">Cooling</a></li>
+								</ul>
+							</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
