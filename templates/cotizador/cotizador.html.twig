@@ -1,7 +1,220 @@
 {% extends 'layouts/master.html.twig' %}
-
 {% block title %} {% endblock %}
-
 {% block metatags %} {% endblock %}
-
-{% block body %} {% endblock %}
+{% block body %}
+	<div class="breadcrumbs-wrap style-2">
+		<div class="container">
+			
+			<h1 class="page-title">Obten un estimado</h1>
+		</div>
+	</div>
+	<div id="content" class="page-content-wrap">
+		<div class="container">
+			
+			<div class="row flex-row">
+				<main id="main" class="col-md-8 col-sm-12 sbr">
+					
+					<div class="content-element3">
+						
+						<p>Completa el siguiente formulario para obtener un estimado de tu servicio<br>
+							<b>Si es una emergencia, porfavor llamanos al 984 109 3825 y con gusto te atenderemos</b>
+						</p>
+					</div>
+					<div class="content-element3">
+						<form class="contact-form">
+							<div class="row flex-row">
+								<div class="col-xs-12">
+									<label><span class="required">¿En que servicio estas interesado?</span></label>
+									<div class="row">
+										<div class="col-xs-3">
+											<div class="input-wrapper">
+												<input type="checkbox" id="checkbox" name="checkbox">
+												<label for="checkbox">Pintura</label>
+											</div>
+											<div class="input-wrapper">
+												<input type="checkbox" id="checkbox2" name="checkbox2">
+												<label for="checkbox2">Impermeabilizante</label>
+											</div>
+											<div class="input-wrapper">
+												<input type="checkbox" id="checkbox3" name="checkbox3">
+												<label for="checkbox3">Herreria</label>
+											</div>
+										</div>
+										<div class="col-xs-3">
+											<div class="input-wrapper">
+												<input type="checkbox" id="checkbox4" name="checkbox4">
+												<label for="checkbox4">Electricidad</label>
+											</div>
+											<div class="input-wrapper">
+												<input type="checkbox" id="checkbox5" name="checkbox5">
+												<label for="checkbox5">Plomería</label>
+											</div>
+											<div class="input-wrapper">
+												<input type="checkbox" id="checkbox6" name="checkbox6">
+												<label for="checkbox6">Gas</label>
+											</div>
+										</div>
+										<div class="col-xs-6">
+											<div class="input-wrapper">
+												<input type="checkbox" id="checkbox7" name="checkbox7">
+												<label for="checkbox7">Aires acondicionados</label>
+											</div>
+											<div class="input-wrapper">
+												<input type="checkbox" id="checkbox8" name="checkbox8">
+												<label for="checkbox8">Pisos (Colocación)</label>
+											</div>
+											<div class="input-wrapper">
+												<input type="checkbox" id="checkbox9" name="checkbox9">
+												<label for="checkbox9">Electrodomésticos</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-sm-12">
+									<button type="button" class="btn btn-default" id="btn-avanzar">Avanzar</button>
+								</div>
+							</div>
+						</form>
+						<hr>
+						
+						<label><b>Pintura</b></label>
+						<p class="text-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, voluptates, ratione illum debitis minima est itaque veritatis porro dolor excepturi, commodi saepe expedita minus neque assumenda sed aliquam consectetur vel.</p>
+						
+						<div class="field_wrapper">
+							<form class="contact-form">
+								<p class="mb-0 mt-20">Pared 1</p>
+								<div class="row flex-row">
+									<div class="col-xs-4">
+										<label class="required">Largo</label>
+										<input type="text">
+									</div>
+									<div class="col-xs-4">
+										<label class="required">Ancho</label>
+										<input type="text">
+									</div>
+									<div class="col-xs-4">
+										<button type="button" class="btn btn-default add_button">+</button>
+									</div>
+								</div>
+								
+							</form>
+							<div class="row">
+								<div class="col-sm-12">
+									<button type="button" class="btn btn-default" id="btn-avanzar">Avanzar</button>
+								</div>
+							</div>
+						</div><br>
+						<div class="row flex-row">
+							<div class="col-sm-12">
+								
+								<label class="required">¿Qué tipo de pintura deseas usar?</label>
+								<div class="custom-select">
+									<div class="select-title">Seleccionar pintura</div>
+								<ul id="menu-type" class="select-list"></ul>
+								<select class="hide">
+									<option value="menu">Comex - $178 MX</option>
+									<option value="menu">Mapla - $158 MX</option>
+									<option value="menu">Boxito - $128 MX</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<hr>
+				</div>
+			</main>
+			<aside id="sidebar" class="col-md-4 col-sm-12 sbr">
+				
+				<!-- widget -->
+				<div class="widget">
+					
+					<h5 class="widget-title">Special Online Offer</h5>
+					<div class="content-element3">
+						<a href="#" class="coupon">
+							<div class="inner">
+								<h2 class="price-title"><span>$</span>25 OFF</h2>
+								<div class="disc-for">ON ANY REPAIR</div>
+								<button type="button" class="btn btn-style-3 btn-small">Click to print</button>
+								<p>Must be presented at the time of service. Can not be combined with any other offer.</p>
+							</div>
+						</a>
+					</div>
+					<a href="#" class="btn btn-small">More Coupons</a>
+					
+				</div>
+				<!-- widget -->
+				<div class="widget">
+					
+					<div class="banners type-2">
+						<div class="banner-inner" data-bg="images/262x264_bg1.jpg">
+							<h2 class="banner-title">Financing Available</h2>
+							<p>With Approved Credit</p>
+							<a href="#" class="btn btn-style-5 btn-small">Learn More</a>
+						</div>
+					</div>
+				</div>
+				<!-- widget -->
+				<div class="widget">
+					
+					<h5 class="widget-title">Latest Articles</h5>
+					<div class="entry-box entry-small">
+						
+						<!-- entry -->
+						<div class="entry">
+							
+							<!-- - - - - - - - - - - - - - Entry attachment - - - - - - - - - - - - - - - - -->
+							<div class="thumbnail-attachment">
+								<a href="#"><img src="images/110x79_img1.jpg" alt=""></a>
+							</div>
+							
+							<!-- - - - - - - - - - - - - - Entry body - - - - - - - - - - - - - - - - -->
+							<div class="entry-body">
+								<div class="entry-meta">
+									<time class="entry-date" datetime="2016-08-27">August 27, 2018</time>
+								</div>
+								<h5 class="entry-title"><a href="#">Donec Porta Diam Eu Massa</a></h5>
+							</div>
+						</div>
+						<!-- entry -->
+						<div class="entry">
+							
+							<!-- - - - - - - - - - - - - - Entry attachment - - - - - - - - - - - - - - - - -->
+							<div class="thumbnail-attachment">
+								<a href="#"><img src="images/110x79_img2.jpg" alt=""></a>
+							</div>
+							
+							<!-- - - - - - - - - - - - - - Entry body - - - - - - - - - - - - - - - - -->
+							<div class="entry-body">
+								<div class="entry-meta">
+									<time class="entry-date" datetime="2016-08-15">August 15, 2018</time>
+								</div>
+								<h5 class="entry-title"><a href="#">Quisque Diam Lorem</a></h5>
+							</div>
+						</div>
+						<!-- entry -->
+						<div class="entry">
+							
+							<!-- - - - - - - - - - - - - - Entry attachment - - - - - - - - - - - - - - - - -->
+							<div class="thumbnail-attachment">
+								<a href="#"><img src="images/110x79_img3.jpg" alt=""></a>
+							</div>
+							
+							<!-- - - - - - - - - - - - - - Entry body - - - - - - - - - - - - - - - - -->
+							<div class="entry-body">
+								<div class="entry-meta">
+									<time class="entry-date" datetime="2016-08-07">August 7, 2018</time>
+								</div>
+								<h5 class="entry-title"><a href="#">Aliquam Dapibus Tincidunt</a></h5>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+			</aside>
+		</div>
+	</div>
+</div>
+{% endblock %}

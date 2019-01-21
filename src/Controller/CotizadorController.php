@@ -12,8 +12,6 @@ class CotizadorController extends AbstractController
      */
     public function cotizador()
     {
-        return $this->render('cotizador/cotizador.html.twig', [
-            'controller_name' => 'CotizadorController',
-        ]);
+        return $this->render('cotizador/cotizador.html.twig');
     }
 }
