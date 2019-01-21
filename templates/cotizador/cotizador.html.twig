@@ -19,6 +19,7 @@
 						<p>Completa el siguiente formulario para obtener un estimado de tu servicio<br>
 							<b>Si es una emergencia, porfavor llamanos al 984 109 3825 y con gusto te atenderemos</b>
 						</p>
+
 					</div>
 					<div class="content-element3">
 						<form class="contact-form">
@@ -26,48 +27,14 @@
 								<div class="col-xs-12">
 									<label><span class="required">¿En que servicio estas interesado?</span></label>
 									<div class="row">
-										<div class="col-xs-3">
-											<div class="input-wrapper">
-												<input type="checkbox" id="checkbox" name="checkbox">
-												<label for="checkbox">Pintura</label>
+										{% for categories in service_categories %}
+											<div class="col-xs-4">
+												<div class="input-wrapper">
+													<input type="checkbox" id="checkbox" name="checkbox">
+													<label for="checkbox">{{ categories.ServiceCategoryName}}</label>
+												</div>
 											</div>
-											<div class="input-wrapper">
-												<input type="checkbox" id="checkbox2" name="checkbox2">
-												<label for="checkbox2">Impermeabilizante</label>
-											</div>
-											<div class="input-wrapper">
-												<input type="checkbox" id="checkbox3" name="checkbox3">
-												<label for="checkbox3">Herreria</label>
-											</div>
-										</div>
-										<div class="col-xs-3">
-											<div class="input-wrapper">
-												<input type="checkbox" id="checkbox4" name="checkbox4">
-												<label for="checkbox4">Electricidad</label>
-											</div>
-											<div class="input-wrapper">
-												<input type="checkbox" id="checkbox5" name="checkbox5">
-												<label for="checkbox5">Plomería</label>
-											</div>
-											<div class="input-wrapper">
-												<input type="checkbox" id="checkbox6" name="checkbox6">
-												<label for="checkbox6">Gas</label>
-											</div>
-										</div>
-										<div class="col-xs-6">
-											<div class="input-wrapper">
-												<input type="checkbox" id="checkbox7" name="checkbox7">
-												<label for="checkbox7">Aires acondicionados</label>
-											</div>
-											<div class="input-wrapper">
-												<input type="checkbox" id="checkbox8" name="checkbox8">
-												<label for="checkbox8">Pisos (Colocación)</label>
-											</div>
-											<div class="input-wrapper">
-												<input type="checkbox" id="checkbox9" name="checkbox9">
-												<label for="checkbox9">Electrodomésticos</label>
-											</div>
-										</div>
+										{% endfor %}
 									</div>
 								</div>
 							</div>
