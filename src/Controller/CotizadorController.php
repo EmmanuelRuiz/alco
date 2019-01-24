@@ -21,9 +21,6 @@ class CotizadorController extends AbstractController
     	$service_categories = $service_categories_repo->findAll();
 
 
-
-		
-
         return $this->render('cotizador/cotizador.html.twig', [
         	'service_categories' => $service_categories
         ]);

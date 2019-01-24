@@ -118,6 +118,8 @@
     margin-bottom: 0px !important;
 }
 
+/* Index Fin */
+
 
 /* Cotizador */
 
@@ -130,3 +132,10 @@
     vertical-align: middle;
     cursor: pointer;
 }
+
+.btn-service-category{
+    width: 100% !important;
+    margin-bottom: 5%;
+}
+
+/*Cotizador Fin */
