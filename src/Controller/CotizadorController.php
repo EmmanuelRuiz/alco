@@ -12,17 +12,19 @@ class CotizadorController extends AbstractController
     /**
      * @Route("/cotizador", name="cotizador")
      */
+
     public function cotizador(){
 
-    	$em = $this->getDoctrine()->getManager();
+        $em = $this->getDoctrine()->getManager();
 
     	$service_categories_repo = $this->getDoctrine()->getRepository(ServiceCategory::class);
 
     	$service_categories = $service_categories_repo->findAll();
 
-
         return $this->render('cotizador/cotizador.html.twig', [
         	'service_categories' => $service_categories
+
         ]);
     }
+
 }
