@@ -16,9 +16,7 @@ class CotizadorController extends AbstractController
     public function cotizador(){
 
         $em = $this->getDoctrine()->getManager();
-
     	$service_categories_repo = $this->getDoctrine()->getRepository(ServiceCategory::class);
-
     	$service_categories = $service_categories_repo->findAll();
 
         return $this->render('cotizador/cotizador.html.twig', [
