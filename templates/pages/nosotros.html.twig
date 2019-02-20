@@ -23,7 +23,7 @@
 						<h2>¿Quíenes somos?</h2>
 						<p>En Alco contamos con el personal técnico y de campo especializado para cada una de las actividades, garantizando un servicio de calidad y con la seguridad de que somos una empresa 100% responsable. Uno de nuestros objetivos es de cuidar la economía de nuestros clientes a través de un estudio en el área de oportunidad, ofreciendo precios competitivos dentro del mercado actual.
 						</p>
-						<a href="alco-informacion-de-contacto" class="btn btn-small">¡Contactar ahora!</a>
+						<a href="{{ path('contact') }}" class="btn btn-small">¡Contactar ahora!</a>
 					</div>
 					<div class="col-md-6"></div>
 				</div>
@@ -42,7 +42,7 @@
 								<div class="icons-item">
 									<div class="item-box">
 										<i class="licon-hammer-wrench"></i>
-										<h5 class="icons-box-title"><a href="#">Especializados en</a></h5>
+										<h5 class="icons-box-title"><a href="{{ path('about') }}">Especializados en</a></h5>
 										<p>Servicio de mantenimiento integral para edificaciones como casas habitación, oficinas, negocios, plazas, comercios, condominios, parques, hoteles y todo aquel espacio habitable.</p>
 									</div>
 								</div>
@@ -54,7 +54,7 @@
 								<div class="icons-item">
 									<div class="item-box">
 										<i class="licon-man"></i>
-										<h5 class="icons-box-title"><a href="#">Personal Capacitado</a></h5>
+										<h5 class="icons-box-title"><a href="{{ path('about') }}">Personal Capacitado</a></h5>
 										<p>Nuestro equipo cuenta con la capacitación necesaria para llevar a cabo sus actividades de manera eficiente.</p>
 									</div>
 								</div>
@@ -67,7 +67,7 @@
 								<div class="icons-item">
 									<div class="item-box">
 										<i class="licon-thumbs-up"></i>
-										<h5 class="icons-box-title"><a href="#">Somos una empresa responsable</a></h5>
+										<h5 class="icons-box-title"><a href="{{ path('about') }}">Somos una empresa responsable</a></h5>
 										<p>Responsable con nuestros clientes, ofrenciendo soluciones accesibles y responsable con nuestro equipo capacitandolos para sus actividades. </p>
 									</div>
 								</div>
@@ -123,11 +123,8 @@
 			</div>
 		</div>
 		<div class="page-section">
-			
 			<div class="container">
-				
 				<div class="team-holder">
-					
 					<div class="row">
 						<div class="col-md-4 col-sm-4 col-xs-6">
 							<div class="team-item">

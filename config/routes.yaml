@@ -14,13 +14,18 @@ about:
     path: /acerca-de-alco-mantenimiento-integral
     controller: App\Controller\PagesController::nosotros
 
-contacto:
+contact:
     path: /alco-informacion-de-contacto
     controller: App\Controller\PagesController::contacto
 
 cotizador:
     path: /cotiza-tu-servicio
     controller: App\Controller\CotizadorController::cotizador
+
+list_providers:
+    path: /lista-de-proveedores
+    controller: App\Controller\CotizadorController::listProviders
+    methods: [POST]
 
 services_arquitectura:
     path: /servicios/servicio-de-arquitectura-por-alco

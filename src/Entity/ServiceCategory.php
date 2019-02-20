@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Entity;
-
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -51,6 +52,15 @@ class ServiceCategory
      * })
      */
     private $user;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\ServiceDescription", mappedBy="serviceCategory")
+     */
+    private $providers;
+
+    public function __construct(){
+        $this->providers = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -103,6 +113,14 @@ class ServiceCategory
         $this->user = $user;
 
         return $this;
+    }
+
+    /*
+     * @return Collection|ServiceDescription[]
+     */
+    public function getDescriptions(): Collection
+    {
+        return $this->providers;
     }
 
 
