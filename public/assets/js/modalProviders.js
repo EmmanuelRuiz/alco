@@ -1,18 +1,20 @@
 $(document).ready(function(){
 
-	$("#services").blur(function(){
-		var services = this.value;
-
+	$(".btn-services").unbind("click").click(function(){
 		$.ajax({
 			url: URL + '/lista-de-proveedores',
-			data: {services: services},
-			type: 'POST',
+			type: 'GET',
+			data: {services: $(this).attr("data-services")},
 			success: function(response){
-				if (response == "number") {
-					$("#prueba").css("border", "5px solid red");
-				}else{
+
+				if (response >= 1) {
 					$("#prueba").css("border", "5px solid green");
+					$("#html").html(response);
+				}else{
+					$("#prueba").css("border", "5px solid red");
+					$("#html").html(response);
 				}
+				
 			}
 		})
 	});

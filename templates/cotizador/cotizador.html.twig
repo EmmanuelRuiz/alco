@@ -24,7 +24,7 @@
 								<div class="row">
 									{% for category in service_categories %}
 										<div class="col-xs-4">
-											<button type="button" class="btn btn-primary btn-service-category" id="services"  data-toggle="modal" data-target="#myModal">{{ category.ServiceCategoryName }}</button>
+											<button type="button" class="btn btn-primary btn-service-category btn-services" id="{{ category.id }}" data-services="{{ category.id }}" data-toggle="modal" data-target="#myModal">{{ category.ServiceCategoryName }}</button>
 										</div>
 									{% endfor %}
 								</div>
@@ -134,15 +134,16 @@
 				<div class="modal-body">
 					<form>
 						<label>Base (En metros)</label>
-						<input type="number" id="prueba">
+						<input type="number">
 						<label>Altura (En metros)</label>
 						<input type="number">
 						<label>Marca de la pintura</label>
-						<select>
+						<select id="select-options">
 							<option>Seleccionar</option>
 						</select>
 						<label>Comentarios</label>
 						<input type="text">
+						<div id="html"></div>
 					</form>
 				</div>
 				<div class="modal-footer">

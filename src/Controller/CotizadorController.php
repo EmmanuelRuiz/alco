@@ -19,6 +19,7 @@ class CotizadorController extends AbstractController
     	$service_categories_repo = $this->getDoctrine()->getRepository(ServiceCategory::class);
     	$service_categories = $service_categories_repo->findAll();
 
+        /*
         foreach ($service_categories as $service_category) {
             $service_category->getServiceCategoryName();
 
@@ -26,10 +27,10 @@ class CotizadorController extends AbstractController
                 $providers->getProvider();
             }
         }
+        */
 
         return $this->render('cotizador/cotizador.html.twig', [
-        	'service_categories' => $service_categories,
-            'providers' => $providers
+        	'service_categories' => $service_categories
         ]);
     }
 
@@ -37,34 +38,41 @@ class CotizadorController extends AbstractController
 
         $category = $request->get("services");
 
-        $result = "";
-
-        /* Lo comparo con 1 porque se supone que pintura tiene el id 1 y si no pues debe tener string con el nombre pintura*/
+        /* Lo comparo con 1 porque se supone que pintura tiene el id 1 y si no pues debe tener string con el nombre pintura */
+        
+        /*
         if ($category == 1) {
             $result = "number";
         }else{
             $result = "string";
         }
-
-        /*
-        $descriptions_repo = $this->getDoctrine()->getRepository(ServiceDescription::class);
-        $providers = $descriptions_repo->findBy([
-            'provider' => $category
-        ]);
         */
 
-        return new Response($result);
+        $descriptions_repo = $this->getDoctrine()->getRepository(ServiceDescription::class);
+        $providers = $descriptions_repo->findBy([
+            'serviceCategory' => $category
+        ]);
+
+        /* Estoy recorriendo los provedores para sacar el nombre de cada uno pero en ajax solo recibe el nombre del ultimo, no todos asi ques hay que ver como conseguir todos */
+        if (count($providers) >= 1) {
+            foreach ($providers as $provider) {
+                $result = $provider->getProvider();
+            }
+            var_dump($providers);
+        }else{
+            $result = "Sabra que hace";
+        }
 
         /*
         $em = $this->getDoctrine()->getManager();
-        $service_categories_repo = $em->getRepository(ServiceCategory::class);
+        $descriptions_repo = $em->getRepository(ServiceDescription::class);
         
-        $dql = "SELECT sd FROM App\Entity\ServiceDescription sd WHERE sd.service_category_id = '$provider'";
+        $dql = "SELECT provider FROM service_description WHERE service_category_id = '$category'";
         $query = $em->createQuery($dql);
-        $result_isset = $query->execute();
+        $result = $query->execute();
         */
 
-
+        return new Response($result);
 
     }
 
