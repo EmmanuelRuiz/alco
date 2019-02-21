@@ -19,18 +19,15 @@ class CotizadorController extends AbstractController
     	$service_categories_repo = $this->getDoctrine()->getRepository(ServiceCategory::class);
     	$service_categories = $service_categories_repo->findAll();
 
-        /*
-        foreach ($service_categories as $service_category) {
-            $service_category->getServiceCategoryName();
+        $service_description_repo = $this->getDoctrine()->getRepository(ServiceDescription::class);
+        $service_description = $service_description_repo->findAll();
 
-            foreach ($service_category->getDescriptions() as $providers) {
-                $providers->getProvider();
-            }
-        }
-        */
 
+
+        
         return $this->render('cotizador/cotizador.html.twig', [
-        	'service_categories' => $service_categories
+        	'service_categories' => $service_categories,
+            'service_description' => $service_description
         ]);
     }
 
