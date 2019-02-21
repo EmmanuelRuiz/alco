@@ -24,7 +24,7 @@
 								<div class="row">
 									{% for category in service_categories %}
 										<div class="col-xs-4">
-											<button type="button" class="btn btn-primary btn-service-category btn-services" id="{{ category.id }}" data-services="{{ category.id }}" data-toggle="modal" data-target="#myModal">{{ category.ServiceCategoryName }}</button>
+											<button type="button" class="btn btn-primary btn-service-category btn-services" data-toggle="modal" data-target="#{{ category.id }}">{{ category.ServiceCategoryName }}</button>
 										</div>
 									{% endfor %}
 								</div>
@@ -33,10 +33,7 @@
 					</div>
 				</main>
 				<aside id="sidebar" class="col-md-4 col-sm-12 sbr">
-					
-					<!-- widget -->
 					<div class="widget">
-						
 						<h5 class="widget-title">Special Online Offer</h5>
 						<div class="content-element3">
 							<a href="#" class="coupon">
@@ -49,110 +46,42 @@
 							</a>
 						</div>
 						<a href="#" class="btn btn-small">More Coupons</a>
-						
 					</div>
-					<!-- widget -->
-					<div class="widget">
-						
-						<div class="banners type-2">
-							<div class="banner-inner" data-bg="images/262x264_bg1.jpg">
-								<h2 class="banner-title">Financing Available</h2>
-								<p>With Approved Credit</p>
-								<a href="#" class="btn btn-style-5 btn-small">Learn More</a>
-							</div>
-						</div>
-					</div>
-					<!-- widget -->
-					<div class="widget">
-						
-						<h5 class="widget-title">Latest Articles</h5>
-						<div class="entry-box entry-small">
-							
-							<!-- entry -->
-							<div class="entry">
-								
-								<!-- - - - - - - - - - - - - - Entry attachment - - - - - - - - - - - - - - - - -->
-								<div class="thumbnail-attachment">
-									<a href="#"><img src="images/110x79_img1.jpg" alt=""></a>
-								</div>
-								
-								<!-- - - - - - - - - - - - - - Entry body - - - - - - - - - - - - - - - - -->
-								<div class="entry-body">
-									<div class="entry-meta">
-										<time class="entry-date" datetime="2016-08-27">August 27, 2018</time>
-									</div>
-									<h5 class="entry-title"><a href="#">Donec Porta Diam Eu Massa</a></h5>
-								</div>
-							</div>
-							<!-- entry -->
-							<div class="entry">
-								
-								<!-- - - - - - - - - - - - - - Entry attachment - - - - - - - - - - - - - - - - -->
-								<div class="thumbnail-attachment">
-									<a href="#"><img src="images/110x79_img2.jpg" alt=""></a>
-								</div>
-								
-								<!-- - - - - - - - - - - - - - Entry body - - - - - - - - - - - - - - - - -->
-								<div class="entry-body">
-									<div class="entry-meta">
-										<time class="entry-date" datetime="2016-08-15">August 15, 2018</time>
-									</div>
-									<h5 class="entry-title"><a href="#">Quisque Diam Lorem</a></h5>
-								</div>
-							</div>
-							<!-- entry -->
-							<div class="entry">
-								
-								<!-- - - - - - - - - - - - - - Entry attachment - - - - - - - - - - - - - - - - -->
-								<div class="thumbnail-attachment">
-									<a href="#"><img src="images/110x79_img3.jpg" alt=""></a>
-								</div>
-								
-								<!-- - - - - - - - - - - - - - Entry body - - - - - - - - - - - - - - - - -->
-								<div class="entry-body">
-									<div class="entry-meta">
-										<time class="entry-date" datetime="2016-08-07">August 7, 2018</time>
-									</div>
-									<h5 class="entry-title"><a href="#">Aliquam Dapibus Tincidunt</a></h5>
-								</div>
-							</div>
-						</div>
-						
-					</div>
-					
 				</aside>
 			</div>
 		</div>
 	</div>
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
-				</div>
-				<div class="modal-body">
-					<form>
-						<label>Base (En metros)</label>
-						<input type="number">
-						<label>Altura (En metros)</label>
-						<input type="number">
-						<label>Marca de la pintura</label>
-						<select id="select-options">
-							<option>Seleccionar</option>
-						</select>
-						<label>Comentarios</label>
-						<input type="text">
-						<div id="html"></div>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
+	{% for category in service_categories %}
+		<div class="modal fade" id="{{ category.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">{{ category.ServiceCategoryName }}</h4>
+					</div>
+					<div class="modal-body">
+						<form>
+							<label>Base (En metros)</label>
+							<input type="number">
+							<label>Altura (En metros)</label>
+							<input type="number">
+							<label>Marca de la pintura</label>
+							<select id="select-options">
+								<option>Seleccionar</option>
+							</select>
+							<label>Comentarios</label>
+							<input type="text">
+							<div id="html"></div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">Listo</button>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	{% endfor %}
+	
 {% endblock %}
 {% block footer %}
 	{{ parent() }}
