@@ -18,15 +18,6 @@ contact:
     path: /alco-informacion-de-contacto
     controller: App\Controller\PagesController::contacto
 
-cotizador:
-    path: /cotiza-tu-servicio
-    controller: App\Controller\CotizadorController::cotizador
-
-list_providers:
-    path: /lista-de-proveedores
-    controller: App\Controller\CotizadorController::listProviders
-    methods: [GET]
-
 services_arquitectura:
     path: /servicios/servicio-de-arquitectura-por-alco
     controller: App\Controller\PagesController::arquitectura
@@ -70,3 +61,79 @@ services_palapas_pergolas:
 services_electrodomesticos:
     path: /servicios/servicio-de-mantenimiento-de-electrodomesticos-por-alco
     controller: App\Controller\PagesController::electrodomesticos
+
+cotizador:
+    path: /cotiza-tu-servicio
+    controller: App\Controller\CotizadorController::cotizador
+
+register:
+    path: /registro
+    controller: App\Controller\UserController::register
+
+collaborators:
+    path: /lista-de-colaboradores
+    controller: App\Controller\UserController::collaborators
+
+dashboard:
+    path: /panel-de-control
+    controller: App\Controller\UserController::dashboard
+
+login:
+    path: /login
+    controller: App\Controller\UserController::login
+
+collaborator_detail:
+    path: /colaborador/{id}
+    controller: App\Controller\UserController::detail
+
+collaborator_edit:
+    path: /editar-colaborador/{id}
+    controller: App\Controller\UserController::edit
+
+collaborator_delete:
+    path: /eliminar-colaborador/{id}
+    controller: App\Controller\UserController::delete
+
+logout:
+    path: /logout
+
+list_categories:
+    path: /lista-de-categorias
+    controller: App\Controller\CategoriesController::listCategories
+
+category_creation:
+    path: /crear-categoria
+    controller: App\Controller\CategoriesController::creation
+
+category_detail:
+    path: /categoria/{id}
+    controller: App\Controller\CategoriesController::detail
+
+category_edit:
+    path: /editar-categoria/{id}
+    controller: App\Controller\CategoriesController::edit
+
+category_delete:
+    path: /eliminar-categoria/{id}
+    controller: App\Controller\CategoriesController::delete
+
+list_services:
+    path: /lista-de-servicios
+    controller: App\Controller\DescriptionsController::listServices
+
+service_detail:
+    path: /servicio/{id}
+    controller: App\Controller\DescriptionsController::detail
+
+service_delete:
+    path: /eliminar-servicio/{id}
+    controller: App\Controller\DescriptionsController::delete
+
+service_creation:
+    path: /crear-servicio
+    controller: App\Controller\DescriptionsController::creation
+
+prices:
+    path: /precios
+    controller: App\Controller\CotizadorController::prices
+    methods: [POST]

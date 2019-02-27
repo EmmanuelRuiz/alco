@@ -1,0 +1,36 @@
+{% extends 'layouts/master-admin.html.twig' %}
+{% block title %} {% endblock %}
+{% block metatags %} {% endblock %}
+{% block body %}
+	<br>
+	<br>
+	<br>
+	{% if collaborators|length >= 1 %}
+		<table>
+			<tr>
+				<th>Nombre(s)</th>
+				<th>Apellido(s)</th>
+				<th>Email</th>
+				<th>Acciones</th>
+			</tr>
+			{% for collaborator in collaborators %}
+				<tr>
+					<td>{{ collaborator.name }}</td>
+					<td>{{ collaborator.lastname }}</td>
+					<td>{{ collaborator.email }}</td>
+					<td>
+						<a href="{{ path('collaborator_detail', {'id':collaborator.id}) }}">Ver</a>
+						{% if collaborator.id == app.user.id %}
+							<a href="{{ path('collaborator_edit', {'id':collaborator.id}) }}">Editar</a>
+						{% endif %}
+						{% if collaborator.id != app.user.id %}
+							<a href="{{ path('collaborator_delete', {'id':collaborator.id}) }}">Eliminar</a>
+						{% endif %}
+					</td>
+				</tr>
+			{% endfor %}
+		</table>
+	{% else %}
+		<strong>No hay categorías disponibles</strong>
+	{% endif %}
+{% endblock %}

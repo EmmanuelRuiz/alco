@@ -1,0 +1,21 @@
+{% extends 'layouts/master-admin.html.twig' %}
+{% block title %} Registro {% endblock %}
+{% block metatags %} {% endblock %}
+{% block body %}
+	<br>
+	<br>
+	<br>
+	{% if edit is defined %}
+		<h2>Actualizar Colaborador</h2>
+		{{ form_start(form) }}
+		{{ form_row(form.email, { 'attr': { 'value': app.user.email } }) }}
+		{{ form_row(form.password, { 'attr': { 'value': app.user.password } }) }}
+		{{ form_end(form) }}
+	{% else %}
+		<h2>Nuevo Colaborador</h2>
+		{{ form_start(form) }}
+		{{ form_widget(form) }}
+		{{ form_end(form) }}
+	{% endif %}
+
+{% endblock %}

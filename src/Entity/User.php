@@ -2,6 +2,9 @@
 
 namespace App\Entity;
 
+
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -10,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="users")
  * @ORM\Entity
  */
-class User
+class User implements UserInterface
 {
     /**
      * @var int
@@ -25,6 +28,8 @@ class User
      * @var string|null
      *
      * @ORM\Column(name="name", type="string", length=150, nullable=true)
+     * @Assert\NotBlank
+     * @Assert\Regex("/[a-zA-Z ]+/")
      */
     private $name;
 
@@ -32,6 +37,8 @@ class User
      * @var string|null
      *
      * @ORM\Column(name="lastname", type="string", length=150, nullable=true)
+     * @Assert\NotBlank
+     * @Assert\Regex("/[a-zA-Z ]+/")
      */
     private $lastname;
 
@@ -39,6 +46,8 @@ class User
      * @var string|null
      *
      * @ORM\Column(name="email", type="string", length=255, nullable=true)
+     * @Assert\NotBlank
+     * @Assert\Email (message = "Correo invalido", checkMX = true)
      */
     private $email;
 
@@ -46,6 +55,7 @@ class User
      * @var string|null
      *
      * @ORM\Column(name="password", type="string", length=255, nullable=true)
+     * @Assert\NotBlank
      */
     private $password;
 
@@ -140,5 +150,21 @@ class User
         return $this;
     }
 
+    public function getUsername()
+    {
+        return $this->email;
+    }
+
+    public function getSalt()
+    {
+        return null;
+    }
+
+    public function getRoles()
+    {
+        return array('ROLE_USER', 'ROLE_ADMIN');
+    }
+
+    public function eraseCredentials(){}
 
 }

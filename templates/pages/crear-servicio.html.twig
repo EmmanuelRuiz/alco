@@ -1,0 +1,18 @@
+{% extends 'layouts/master-admin.html.twig' %}
+{% block title %} {% endblock %}
+{% block metatags %} {% endblock %}
+{% block body %}
+	<br>
+	<br>
+	<br>
+	{% if edit is defined %}
+		<h2>Actualizar servicio</h2>
+	{% else %}
+		<h2>Crear servicio</h2>
+	{% endif %}
+	
+	{{ form_start(form) }}
+	{{ form_widget(form) }}
+	{{ form_end(form) }}
+	
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'layouts/master-admin.html.twig' %}
+{% block title %} {% endblock %}
+{% block metatags %} {% endblock %}
+{% block body %}
+	<br>
+	<br>
+	<br>
+	<h2>{{ serviceDescription.description }}</h2>
+	<p>Pertenece a la categoría: {{ serviceDescription.serviceCategory.serviceCategoryName }}</p>
+	{% if serviceDescription.provider == "NULL" %}
+		<p>Proveedor: Ninguno</p>
+	{% else %}
+		<p>Proveedor: {{ serviceDescription.provider }}</p>
+	{% endif %}
+	<p>Precio: {{ serviceDescription.price }}</p>
+	<p>Servicio creado el: {{ serviceDescription.createdAt|date('d/m/Y') }}</p>
+{% endblock %}

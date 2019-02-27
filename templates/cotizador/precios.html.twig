@@ -1,0 +1,14 @@
+{% extends 'layouts/master.html.twig' %}
+{% block title %} Alco | Servicio y Mantenimiento Integral en Playa del Carmen, Cancún y Tulum {% endblock %}
+{% block metatags %} {% endblock %}
+{% block body %}
+	<h1>Precios</h1>
+	<ul>
+		{% for price in descriptions %}
+			<li>{{ price.Price }}</li>
+		{% endfor %}
+	</ul>
+
+	<a href="{{ path('cotizador') }}">Regresar</a>
+
+{% endblock %}

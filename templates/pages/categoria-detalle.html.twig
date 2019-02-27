@@ -1,0 +1,11 @@
+{% extends 'layouts/master-admin.html.twig' %}
+{% block title %} {% endblock %}
+{% block metatags %} {% endblock %}
+{% block body %}
+	<br>
+	<br>
+	<br>
+	<h2>{{ serviceCategory.serviceCategoryName }}</h2>
+	<p>Categoria creada por: {{ serviceCategory.user.name }} {{ serviceCategory.user.lastname }}</p>
+	<p>Categoría creada el: {{ serviceCategory.createdAt|date('d/m/Y') }}</p>
+{% endblock %}

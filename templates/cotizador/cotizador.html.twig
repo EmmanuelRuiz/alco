@@ -21,10 +21,11 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<label><span class="required">¿En que servicio estas interesado?</span></label>
+
 								<div class="row">
 									{% for category in service_categories %}
 										<div class="col-xs-4">
-											<button type="button" class="btn btn-primary btn-service-category btn-services" data-toggle="modal" data-target="#{{ category.id }}">{{ category.ServiceCategoryName }}</button>
+											<button type="button" class="btn btn-primary btn-service-category" data-toggle="modal" data-target="#{{ category.id }}">{{ category.ServiceCategoryName }}</button>
 										</div>
 									{% endfor %}
 								</div>
@@ -60,19 +61,22 @@
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 						<h4 class="modal-title" id="myModalLabel">{{ category.ServiceCategoryName }}</h4>
 					</div>
-					
-					<div class="modal-body">
-						{% for description in service_description %}
-							{% if category.id == description.ServiceCategory.id %}
-								<ul>
-									<li>{{ description.description }}</li>
-								</ul>
-								
-							{% endif %}
-						{% endfor %}
-						
-						
-					</div>
+
+					<form action="{{ path('prices') }}" method="POST">
+						<div class="modal-body">
+							{% for description in service_description %}
+								{% if category.id == description.ServiceCategory.id %}
+									<div>
+										<input type="checkbox" class="services" id="{{ description.id }}" name="services[]" value="{{ description.id }}">
+										<label for="{{ description.id }}">{{ description.description }}</label>
+									</div>
+									<div id="modal-forms"></div>
+								{% endif %}
+							{% endfor %}
+						</div>
+						<input type="submit" value="Enviar">
+					</form>
+
 					<div class="modal-footer">
 						<button type="button" class="btn btn-primary">Listo</button>
 					</div>
@@ -85,5 +89,5 @@
 {% endblock %}
 {% block footer %}
 	{{ parent() }}
-	<script src="{{ asset('assets/js/modalProviders.js')}}"></script>
+	<script src="{{ asset('assets/js/modalPrices.js')}}"></script>
 {% endblock %}

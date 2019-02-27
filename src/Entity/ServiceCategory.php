@@ -105,7 +105,7 @@ class ServiceCategory
 
     public function getUser(): ?User
     {
-        return $this->users;
+        return $this->user;
     }
 
     public function setUser(?User $user): self

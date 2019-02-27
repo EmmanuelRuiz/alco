@@ -1,0 +1,32 @@
+{% extends 'layouts/master-admin.html.twig' %}
+{% block title %} {% endblock %}
+{% block metatags %} {% endblock %}
+{% block body %}
+	<br>
+	<br>
+	<br>
+	<table>
+		<tr>
+			<th>Categoría</th>
+			<th>Nombre</th>
+			<th>Acciones</th>
+		</tr>
+		{% for category in service_categories %}
+			{% for description in service_description %}
+				{% if category.id == description.ServiceCategory.id %}
+					<tr>
+						<td>{{ category.serviceCategoryName }}</td>
+						<td>{{ description.description }}</td>
+						<td>
+							<a href="{{ path('service_detail', {'id':description.id}) }}">Ver</a>
+							{% if description.user.id == app.user.id %}
+								<a href="{{ path('dashboard') }}">Editar</a>
+								<a href="{{ path('service_delete', {'id':description.id}) }}">Eliminar</a>
+							{% endif %}
+						</td>
+					</tr>
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
+	</table>
+{% endblock %}

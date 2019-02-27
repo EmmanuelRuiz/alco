@@ -21,9 +21,6 @@ class CotizadorController extends AbstractController
 
         $service_description_repo = $this->getDoctrine()->getRepository(ServiceDescription::class);
         $service_description = $service_description_repo->findAll();
-
-
-
         
         return $this->render('cotizador/cotizador.html.twig', [
         	'service_categories' => $service_categories,
@@ -31,26 +28,29 @@ class CotizadorController extends AbstractController
         ]);
     }
 
-    public function listProviders(Request $request){
+    public function prices(Request $request){
 
-        $category = $request->get("services");
+        $services = $request->get("services");
 
-        /* Lo comparo con 1 porque se supone que pintura tiene el id 1 y si no pues debe tener string con el nombre pintura */
         
-        /*
-        if ($category == 1) {
-            $result = "number";
-        }else{
-            $result = "string";
-        }
-        */
 
-        $descriptions_repo = $this->getDoctrine()->getRepository(ServiceDescription::class);
-        $providers = $descriptions_repo->findBy([
-            'serviceCategory' => $category
+            $descriptions_repo = $this->getDoctrine()->getRepository(ServiceDescription::class);
+            $descriptions = $descriptions_repo->findBy([
+                'id' => $services
+            ]);
+
+            /*
+            foreach($description as $prices ) {
+                $prices->getPrice();
+            }
+            */
+
+        return $this->render('cotizador/precios.html.twig', [
+            'descriptions' => $descriptions
         ]);
 
         /* Estoy recorriendo los provedores para sacar el nombre de cada uno pero en ajax solo recibe el nombre del ultimo, no todos asi ques hay que ver como conseguir todos */
+        /*
         if (count($providers) >= 1) {
             foreach ($providers as $provider) {
                 $result = $provider->getProvider();
@@ -59,6 +59,7 @@ class CotizadorController extends AbstractController
         }else{
             $result = "Sabra que hace";
         }
+        */
 
         /*
         $em = $this->getDoctrine()->getManager();
@@ -69,7 +70,7 @@ class CotizadorController extends AbstractController
         $result = $query->execute();
         */
 
-        return new Response($result);
+        //return new Response($result);
 
     }
 
