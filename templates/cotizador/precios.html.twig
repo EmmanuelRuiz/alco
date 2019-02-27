@@ -5,37 +5,36 @@
 	<br>
 	<br>
 	<br>
-	<ul>
+	<form action="{{ path('form_data') }}" method="POST">
 		{% for description in descriptions %}
-			{% if description.price == 0 and description.description == "Pintura" %}
-				<form action="">
+			{% if description.price == 0 %}
+				{% if description.provider == "NULL" %}
 					<h2>{{ description.description }}</h2>
-					<label for="">Base (En metros)</label>
-					<input type="number">
-					<label for="">Altura (En metros)</label>
-					<input type="number">
-					<label for="">Comentarios</label>
-					<input type="textarea">
-				</form>
-				<br>
-			{% elseif description.price == 0 and description.description == "Impermeabilizado" %}
-				<form action="">
-					<h2>{{ description.description }}</h2>
-					<label for="">Base (En metros)</label>
-					<input type="number">
-					<label for="">Altura (En metros)</label>
-					<input type="number">
-					<label for="">Comentarios</label>
-					<input type="textarea">
-				</form>
+				{% else %}
+					<h2>{{ description.description }} ({{ description.provider }})</h2>
+				{% endif %}
+				<label for="">Base (En metros)</label>
+				<input type="number" class="base" name="base[]" id="{{ description.id }}">
+				<label for="">Altura (En metros)</label>
+				<input type="number" class="altura" name="altura[]" id="{{ description.id }}">
+				<label for="">Comentarios</label>
+				<input type="textarea" class="comentarios" name="comentarios[]" id="{{ description.id }}">
+				<input type="hidden" class="idsServicios" name="idsServicios[]" value="{{ description.id }}">
 				<br>
 			{% else %}
-				<h2>{{ description.description }}</h2>
-				<p>{{ description.Price }}</p>
+				{% if description.provider == "NULL" %}
+					<h2>{{ description.description }}</h2>
+				{% else %}
+					<h2>{{ description.description }} ({{ description.provider }})</h2>
+				{% endif %}
+				<input type="hidden" class="serviciosConPrecio" name="serviciosConPrecio[]" value="{{ description.Price }}">{{ description.Price }}
+				<input type="hidden" class="idsServicios" name="idsServicios[]" value="{{ description.id }}">
 				<br>
 			{% endif %}
 		{% endfor %}
-	</ul>
+		<input type="submit" value="Cotizar">
+	</form>
+	<br>
 	<a href="{{ path('cotizador') }}">Regresar</a>
 
 {% endblock %}

@@ -137,3 +137,8 @@ prices:
     path: /precios
     controller: App\Controller\CotizadorController::prices
     methods: [POST]
+
+form_data:
+    path: /servicios-cotizados
+    controller: App\Controller\CotizadorController::formData
+    methods: [POST]

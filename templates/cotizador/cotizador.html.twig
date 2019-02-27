@@ -68,7 +68,11 @@
 								{% if category.id == description.ServiceCategory.id %}
 									<div>
 										<input type="checkbox" class="services" id="{{ description.id }}" name="services[]" value="{{ description.id }}">
-										<label for="{{ description.id }}">{{ description.description }}</label>
+										{% if description.provider == "NULL" %}
+											<label for="{{ description.id }}">{{ description.description }}</label>
+										{% else %}
+											<label for="{{ description.id }}">{{ description.description }} ({{ description.provider }})</label>
+										{% endif %}
 									</div>
 									<div id="modal-forms"></div>
 								{% endif %}

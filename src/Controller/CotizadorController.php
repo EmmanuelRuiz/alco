@@ -43,4 +43,40 @@ class CotizadorController extends AbstractController
 
     }
 
+    public function formData(Request $request){
+
+        $bases = $request->get("base");
+        $alturas = $request->get("altura");
+        $comentarios = $request->get("comentarios");
+        $serviciosConPrecio = $request->get("serviciosConPrecio");
+        $idsServicios = $request->get("idsServicios");
+
+        for ($i = 0; $i < count($idsServicios); $i++) {
+            for ($i = 0; $i < count($bases); $i++) {
+                for ($i = 0; $i < count($alturas); $i++) {
+                    for ($i = 0; $i < count($comentarios); $i++) {
+                        echo "Id Servicio: " . $idsServicios[$i] . "<br/>";
+                        echo "Base: " . $i . " Mide: " . $bases[$i] . "<br/>";
+                        echo "Altura: " . $i . " Mide: " . $alturas[$i] . "<br/>";
+                        echo "Comentario: " . $i . " Dice: " . $comentarios[$i] . "<br/>";
+                        $metrosCuadrados = $bases[$i] * $alturas[$i];
+                        echo "Metros Cuadrados: " . " Mide: " . $metrosCuadrados . "<br/><br/>";
+                    }
+                }
+            }
+        }
+
+        var_dump($bases);
+        var_dump($alturas);
+        var_dump($comentarios);
+        var_dump($serviciosConPrecio);
+        var_dump($idsServicios);
+        
+
+        return $this->render('cotizador/servicios-cotizados.html.twig', [
+            
+        ]);
+
+    }
+
 }

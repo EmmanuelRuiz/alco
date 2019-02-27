@@ -59,7 +59,7 @@ class ServiceDescription
     /**
      * @var \ServiceCategory
      *
-     * @ORM\ManyToOne(targetEntity="App\Entity\ServiceCategory", inversedBy="providers")
+     * @ORM\ManyToOne(targetEntity="ServiceCategory")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="service_category_id", referencedColumnName="id")
      * })
