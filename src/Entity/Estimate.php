@@ -184,7 +184,6 @@ class Estimate
         return $this->serviceDescription;
     }
 
-    /* Cambie la línea 187 de ?ServiceDescription a ?string, porque no permitia setear el campo sin que sea extension de un ServiceDescription */
     public function setServiceDescription(?ServiceDescription $serviceDescription): self
     {
         $this->serviceDescription = $serviceDescription;
@@ -196,8 +195,7 @@ class Estimate
     {
         return $this->visitor;
     }
-
-    /* Cambie la línea 201 de ?Visitor a ?string, porque no permitia setear el campo sin que sea extension de un Visitor */
+    
     public function setVisitor(?Visitor $visitor): self
     {
         $this->visitor = $visitor;

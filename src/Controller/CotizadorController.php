@@ -62,16 +62,12 @@ class CotizadorController extends AbstractController
         */
         $tipo = 0;
 
-        $estimate = new Estimate();
         $visitor = new Visitor();
         $visitor->setName('visitante');
         $visitor->setCreatedAt(new \DateTime('now'));
-
-        /*
         $em = $this->getDoctrine()->getManager();
         $em->persist($visitor);
         $em->flush();
-        */
 
         if ($bases == "" && $alturas == "" && $comentarios == "") {
 
@@ -85,17 +81,16 @@ class CotizadorController extends AbstractController
                 for ($i = 0; $i < count($serviciosConPrecio); $i++) {
 
                     $precioTotal = $precioTotal + $serviciosConPrecio[$i];
-
-                    $estimate->setServiceDescription($idsServicios[$i]);
-                    $estimate->setVisitor($visitor->getId());
-                    $estimate->setCreatedAt(new \DateTime('now'));
-
+                    $estimate = new Estimate();
                     $em = $this->getDoctrine()->getManager();
+                    $idDescription = $em->getRepository('App\Entity\ServiceDescription')->find($idsServicios[$i]);
+                    $estimate->setServiceDescription($idDescription);
+                    $idVisitor = $em->getRepository('App\Entity\Visitor')->find($visitor->getId());
+                    $estimate->setVisitor($idVisitor);
+                    $estimate->setCreatedAt(new \DateTime('now'));
                     $em->persist($estimate);
                     $em->flush();
-                    
-                    var_dump($estimate);
-                    
+
                 }
             }
             
@@ -128,7 +123,31 @@ class CotizadorController extends AbstractController
                         for ($i = 0; $i < count($comentarios); $i++) {
 
                             array_push($metrosCuadrados, $bases[$i] * $alturas[$i]);
-                            array_push($serviciosConPrecio, $metrosCuadrados[$i] * 30);
+                            foreach ($service_description as $description) {
+                                if ($description->getId() == $idsServicios[$i]) {
+                                    if ($serviciosConPrecio == "") {
+                                        switch ($description->getDescription()) {
+                                            case 'Pintura':
+                                                $serviciosConPrecio = array($metrosCuadrados[$i] * 50);
+                                                break;
+
+                                            case 'Impermeabilizado':
+                                                $serviciosConPrecio = array($metrosCuadrados[$i] * 100);
+                                                break;
+                                        }
+                                    }else{
+                                        switch ($description->getDescription()) {
+                                            case 'Pintura':
+                                                array_push($serviciosConPrecio, $metrosCuadrados[$i] * 50);
+                                                break;
+
+                                            case 'Impermeabilizado':
+                                                array_push($serviciosConPrecio, $metrosCuadrados[$i] * 100);
+                                                break;
+                                        }
+                                    }
+                                }
+                            }
                             array_push($serviciosConSusValores, array(
                                 'id' => $idsServicios[$i],
                                 'base' => $bases[$i],
@@ -140,6 +159,22 @@ class CotizadorController extends AbstractController
                             $precioTotal = $precioTotal + $serviciosConPrecio[$i+$count];
                         }
                     }
+                }
+            }
+
+            for ($i = 0; $i < count($idsServicios); $i++) {
+                for ($i = 0; $i < count($serviciosConPrecio); $i++) {
+
+                    $estimate = new Estimate();
+                    $em = $this->getDoctrine()->getManager();
+                    $idDescription = $em->getRepository('App\Entity\ServiceDescription')->find($idsServicios[$i]);
+                    $estimate->setServiceDescription($idDescription);
+                    $idVisitor = $em->getRepository('App\Entity\Visitor')->find($visitor->getId());
+                    $estimate->setVisitor($idVisitor);
+                    $estimate->setCreatedAt(new \DateTime('now'));
+                    $em->persist($estimate);
+                    $em->flush();
+
                 }
             }
 
@@ -163,14 +198,33 @@ class CotizadorController extends AbstractController
                 for ($i = 0; $i < count($bases); $i++) {
                     for ($i = 0; $i < count($alturas); $i++) {
                         for ($i = 0; $i < count($comentarios); $i++) {
+
                             array_push($metrosCuadrados, $bases[$i] * $alturas[$i]);
+                            foreach ($service_description as $description) {
+                                if ($description->getId() == $idsServicios[$i]) {
+                                    if ($serviciosConPrecio == "") {
+                                        switch ($description->getDescription()) {
+                                            case 'Pintura':
+                                                $serviciosConPrecio = array($metrosCuadrados[$i] * 50);
+                                                break;
 
-                            if ($serviciosConPrecio == "") {
-                                $serviciosConPrecio = array($metrosCuadrados[$i] * 30);
-                            }else{
-                                array_push($serviciosConPrecio, $metrosCuadrados[$i] * 30);
+                                            case 'Impermeabilizado':
+                                                $serviciosConPrecio = array($metrosCuadrados[$i] * 100);
+                                                break;
+                                        }
+                                    }else{
+                                        switch ($description->getDescription()) {
+                                            case 'Pintura':
+                                                array_push($serviciosConPrecio, $metrosCuadrados[$i] * 50);
+                                                break;
+
+                                            case 'Impermeabilizado':
+                                                array_push($serviciosConPrecio, $metrosCuadrados[$i] * 100);
+                                                break;
+                                        }
+                                    }
+                                }
                             }
-
                             array_push($serviciosConSusValores, array(
                                 'id' => $idsServicios[$i],
                                 'base' => $bases[$i],
@@ -180,6 +234,16 @@ class CotizadorController extends AbstractController
                                 'precio' => $serviciosConPrecio[$i]
                             ));
                             $precioTotal = $precioTotal + $serviciosConPrecio[$i];
+                            $estimate = new Estimate();
+                            $em = $this->getDoctrine()->getManager();
+                            $idDescription = $em->getRepository('App\Entity\ServiceDescription')->find($idsServicios[$i]);
+                            $estimate->setServiceDescription($idDescription);
+                            $idVisitor = $em->getRepository('App\Entity\Visitor')->find($visitor->getId());
+                            $estimate->setVisitor($idVisitor);
+                            $estimate->setCreatedAt(new \DateTime('now'));
+                            $em->persist($estimate);
+                            $em->flush();
+
                         }
                     }
                 }
