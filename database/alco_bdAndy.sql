@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 27-02-2019 a las 04:10:53
+-- Tiempo de generación: 01-03-2019 a las 18:12:38
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.14
 
@@ -140,7 +140,14 @@ CREATE TABLE IF NOT EXISTS `estimate` (
   PRIMARY KEY (`id`),
   KEY `fk_estimate_service_description` (`service_description_id`),
   KEY `fk_estimate_visitors_is` (`visitors_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `estimate`
+--
+
+INSERT INTO `estimate` (`id`, `service_description_id`, `visitors_id`, `client_name`, `client_email`, `client_phone`, `location`, `comments`, `pdf`, `created_at`) VALUES
+(1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 16:49:49');
 
 -- --------------------------------------------------------
 
@@ -306,7 +313,7 @@ CREATE TABLE IF NOT EXISTS `service_description` (
   PRIMARY KEY (`id`),
   KEY `fk_service_description_users` (`users_id`),
   KEY `fk_service_description_service_category` (`service_category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `service_description`
@@ -352,7 +359,10 @@ INSERT INTO `service_description` (`id`, `users_id`, `service_category_id`, `des
 (67, 2, 18, 'Remodelaciones y ampliaciones', 'NULL', 100, '2019-02-22 09:00:00', NULL),
 (68, 2, 18, 'Construcción de albercas y cisternas', 'NULL', 100, '2019-02-22 09:00:00', NULL),
 (69, 2, 18, 'Fabricación de pisos terrazos', 'NULL', 100, '2019-02-22 09:00:00', NULL),
-(70, 10, 24, 'jajajaj', 'NI UNO', 852, '2019-02-26 19:00:00', NULL);
+(70, 10, 24, 'jajajaj', 'NI UNO', 852, '2019-02-26 19:00:00', NULL),
+(71, 5, 10, 'Pintura', 'Comex', 0, '2019-02-27 12:00:00', NULL),
+(72, 5, 10, 'Impermeabilizado', 'Comex', 0, '2019-02-27 12:00:00', NULL),
+(73, 5, 10, 'Precio solamente', 'Andy', 500, '2019-02-27 12:00:00', NULL);
 
 -- --------------------------------------------------------
 
@@ -402,7 +412,7 @@ INSERT INTO `users` (`id`, `name`, `lastname`, `email`, `password`, `role_user`,
 (2, 'Juan Enrique', 'Amaya Ku', 'amayajuan95@gmail.com', 'adja2019', 'ROLE_ADMIN', '2019-01-21 04:00:00'),
 (5, 'Andy', 'Ayala', 'andy@andy.com', '$2y$04$924eskgLxbLXoVHtztH.r.exGJT8kfhzeBxjpxoUB4gHBl63SlOGS', 'ROLE_USER', '2019-02-25 22:54:15'),
 (8, 'Chencho', 'Dzul', 'aa@aa.com', '$2y$04$E/QZ01bEuMsva/DAxkfvnezfpa2OS1QawJMjmC.4iPnaZG5nMB0jq', 'ROLE_USER', '2019-02-26 22:58:01'),
-(10, 'Pedro', 'Messi', 'pedro@pedro.com', '$2y$04$Vvopaxl7.nItajDRhl6qO.pvsXQOTIFC1nbIetyM75x.wIBiwMHiK', 'ROLE_USER', '2019-02-26 23:14:33');
+(10, 'Pedros', 'Messi', 'pedro@pedro.com', '$2y$04$Vvopaxl7.nItajDRhl6qO.pvsXQOTIFC1nbIetyM75x.wIBiwMHiK', 'ROLE_USER', '2019-02-26 23:14:33');
 
 -- --------------------------------------------------------
 
@@ -416,7 +426,21 @@ CREATE TABLE IF NOT EXISTS `visitors` (
   `name` varchar(200) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `visitors`
+--
+
+INSERT INTO `visitors` (`id`, `name`, `created_at`) VALUES
+(1, 'visitante', '2019-03-01 11:00:00'),
+(2, 'visitante', '2019-03-01 10:00:00'),
+(3, 'visitante', '2019-03-01 15:46:57'),
+(4, 'visitante', '2019-03-01 15:54:50'),
+(5, 'visitante', '2019-03-01 16:39:42'),
+(6, 'visitante', '2019-03-01 16:41:37'),
+(7, 'visitante', '2019-03-01 16:42:08'),
+(8, 'visitante', '2019-03-01 16:50:29');
 
 -- --------------------------------------------------------
 
