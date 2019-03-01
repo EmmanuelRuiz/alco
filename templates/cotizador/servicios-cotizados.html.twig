@@ -2,5 +2,79 @@
 {% block title %} Alco | Servicio y Mantenimiento Integral en Playa del Carmen, Cancún y Tulum {% endblock %}
 {% block metatags %} {% endblock %}
 {% block body %}
-	<h2>Hola</h2>
+	
+	{% if tipo == 0 %}
+
+		{% if precioTotal is defined and service_description is defined %}
+			{% for description in service_description %}
+				{% if description.provider == "NULL" %}
+					<h4>{{ description.description }}</h4>
+				{% else %}
+					<h4>{{ description.description }} ({{ description.provider }})</h4>
+				{% endif %}
+				<p>Precio del servicio: {{ description.price }}</p>
+			{% endfor %}
+			<p>Precio Total: {{ precioTotal }}</p>
+		{% endif %}
+
+	{% elseif tipo == 1 %}
+
+		{% if serviciosConSusValores is defined and service_description is defined and precioTotal is defined %}
+			{% for servicio in serviciosConSusValores %}
+				{% for description in service_description %}
+					{% if servicio.id == description.id %}
+						{% if description.provider == "NULL" %}
+							<h4>{{ description.description }}</h4>
+						{% else %}
+							<h4>{{ description.description }} ({{ description.provider }})</h4>
+						{% endif %}
+					{% endif %}
+				{% endfor %}
+				<p>Base (En metros): {{ servicio.base }}</p>
+				<p>Altura (En metros): {{ servicio.altura }}</p>
+				<p>Metros Cuadrados: {{ servicio.metrosCuadrados }}</p>
+				<p>Comentario: {{ servicio.comentario }}</p>
+				<p>Precio del servicio: {{ servicio.precio }}</p>
+			{% endfor %}
+			{% for description in service_description %}
+				{% if description.price != 0 %}
+					{% if description.provider == "NULL" %}
+							<h4>{{ description.description }}</h4>
+						{% else %}
+							<h4>{{ description.description }} ({{ description.provider }})</h4>
+						{% endif %}
+					<p>{{ description.price }}</p>
+				{% endif %}
+			{% endfor %}
+			<p>Precio Total: {{ precioTotal }}</p>
+		{% endif %}
+
+	{% elseif tipo == 2 %}
+
+		{% if serviciosConSusValores is defined and service_description is defined and precioTotal is defined %}
+			{% for servicio in serviciosConSusValores %}
+				{% for description in service_description %}
+					{% if servicio.id == description.id %}
+						{% if description.provider == "NULL" %}
+							<h4>{{ description.description }}</h4>
+						{% else %}
+							<h4>{{ description.description }} ({{ description.provider }})</h4>
+						{% endif %}
+					{% endif %}
+				{% endfor %}
+				<p>Base (En metros): {{ servicio.base }}</p>
+				<p>Altura (En metros): {{ servicio.altura }}</p>
+				<p>Metros Cuadrados: {{ servicio.metrosCuadrados }}</p>
+				<p>Comentario: {{ servicio.comentario }}</p>
+				<p>Precio del servicio: {{ servicio.precio }}</p>
+			{% endfor %}
+			<p>Precio Total: {{ precioTotal }}</p>
+		{% endif %}
+
+	{% endif %}
+
+	<a href="{{ path('contact') }}">Contactar</a>
+	<br>
+	<a href="">Guardar Cotización</a>
+
 {% endblock %}
