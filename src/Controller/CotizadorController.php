@@ -338,6 +338,7 @@ class CotizadorController extends AbstractController
 
     public function generatePDF(Request $request, Estimate $estimate){
 
+        /*
         $nombre = $request->get("name");
         $correo = $request->get("email");
         $telefono = $request->get("phone");
@@ -355,6 +356,7 @@ class CotizadorController extends AbstractController
         $em->flush();
 
         return $this->redirectToRoute('cotizador');
+        */
 
     }
 
