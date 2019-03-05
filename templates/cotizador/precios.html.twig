@@ -2,39 +2,83 @@
 {% block title %} Alco | Servicio y Mantenimiento Integral en Playa del Carmen, Cancún y Tulum {% endblock %}
 {% block metatags %} {% endblock %}
 {% block body %}
-	<br>
-	<br>
-	<br>
-	<form action="{{ path('form_data') }}" method="POST">
-		{% for description in descriptions %}
-			{% if description.price == 0 %}
-				{% if description.provider == "NULL" %}
-					<h2>{{ description.description }}</h2>
-				{% else %}
-					<h2>{{ description.description }} ({{ description.provider }})</h2>
-				{% endif %}
-				<label for="">Base (En metros)</label>
-				<input type="number" class="base" name="base[]" id="{{ description.id }}">
-				<label for="">Altura (En metros)</label>
-				<input type="number" class="altura" name="altura[]" id="{{ description.id }}">
-				<label for="">Comentarios</label>
-				<input type="textarea" class="comentarios" name="comentarios[]" id="{{ description.id }}">
-				<input type="hidden" class="idsServicios" name="idsServicios[]" value="{{ description.id }}">
-				<br>
-			{% else %}
-				{% if description.provider == "NULL" %}
-					<h2>{{ description.description }}</h2>
-				{% else %}
-					<h2>{{ description.description }} ({{ description.provider }})</h2>
-				{% endif %}
-				<input type="hidden" class="serviciosConPrecio" name="serviciosConPrecio[]" value="{{ description.Price }}">{{ description.Price }}
-				<input type="hidden" class="idsServicios" name="idsServicios[]" value="{{ description.id }}">
-				<br>
-			{% endif %}
-		{% endfor %}
-		<input type="submit" value="Cotizar">
-	</form>
-	<br>
-	<a href="{{ path('cotizador') }}">Regresar</a>
-
+	<div class="breadcrumbs-wrap style-2">
+		<div class="container">
+			<h1 class="page-title">Obt&eacuten un estimado</h1>
+		</div>
+	</div>
+	<div id="content" class="page-content-wrap">
+		<div class="container">
+			
+			<div class="row flex-row">
+				<main id="main" class="col-md-8 col-sm-12 sbr">
+					<form action="{{ path('form_data') }}" method="POST">
+						{% for description in descriptions %}
+							{% if description.price == 0 %}
+								{% if description.provider == "NULL" %}
+									<h2>{{ description.description }}</h2>
+									<div class="alert alert-success" role="alert">
+										Porfavor, ingresa los datos que se solicitan para poder realizar la cotización
+									</div>
+								{% else %}
+									<h2>{{ description.description }} ({{ description.provider }})</h2>
+									<div class="alert alert-success" role="alert">
+										Porfavor, ingresa los datos que se solicitan para poder realizar la cotización
+									</div>
+								{% endif %}
+								<div class="row">
+									<div class="col-md-6">
+										<label for="">Base (En metros)</label>
+										<input type="number" class="base form-control" name="base[]" id="{{ description.id }}">
+									</div>
+									<div class="col-md-6">
+										<label for="">Altura (En metros)</label>
+										<input type="number" class="altura form-control" name="altura[]" id="{{ description.id }}">
+									</div>
+									<div class="col-md-12">
+										
+										<label for="">Comentarios</label>
+										<textarea rows="4" type="textarea" class="comentarios form-control" name="comentarios[]" id="{{ description.id }}"></textarea>
+										<input type="hidden" class="idsServicios" name="idsServicios[]" value="{{ description.id }}">
+									</div>
+								</div><br>
+							{% else %}
+								{% if description.provider == "NULL" %}
+									<h2>{{ description.description }}</h2>
+								{% else %}
+									<h2>{{ description.description }} ({{ description.provider }})</h2>
+								{% endif %}
+								<input type="hidden" class="serviciosConPrecio" name="serviciosConPrecio[]" value="{{ description.Price }}">{{ description.Price }}
+								<input type="hidden" class="idsServicios" name="idsServicios[]" value="{{ description.id }}">
+								<br>
+							{% endif %}
+						{% endfor %}
+						
+						<div class="pull-right">
+							<input type="submit" class="btn btn-style-5 btn-lg" value="Cotizar">
+							<a href="{{ path('cotizador') }}"  class="btn btn-style-1">Realizar otra cotización</a>
+						</div>
+						
+						
+					</form>
+				</main>
+				<aside id="sidebar" class="col-md-4 col-sm-12 sbr">
+					<div class="widget">
+						<h5 class="widget-title">Special Online Offer</h5>
+						<div class="content-element3">
+							<a href="#" class="coupon">
+								<div class="inner">
+									<h2 class="price-title"><span>$</span>25 OFF</h2>
+									<div class="disc-for">ON ANY REPAIR</div>
+									<button type="button" class="btn btn-style-3 btn-small">Click to print</button>
+									<p>Must be presented at the time of service. Can not be combined with any other offer.</p>
+								</div>
+							</a>
+						</div>
+						<a href="#" class="btn btn-small">More Coupons</a>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</div>
 {% endblock %}
