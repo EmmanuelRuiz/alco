@@ -62,10 +62,6 @@ services_electrodomesticos:
     path: /servicios/servicio-de-mantenimiento-de-electrodomesticos-por-alco
     controller: App\Controller\PagesController::electrodomesticos
 
-cotizador:
-    path: /cotiza-tu-servicio
-    controller: App\Controller\CotizadorController::cotizador
-
 register:
     path: /registro
     controller: App\Controller\UserController::register
@@ -133,6 +129,14 @@ service_creation:
     path: /crear-servicio
     controller: App\Controller\DescriptionsController::creation
 
+service_edit:
+    path: /editar-servicio/{id}
+    controller: App\Controller\DescriptionsController::edit
+
+cotizador:
+    path: /cotiza-tu-servicio
+    controller: App\Controller\CotizadorController::cotizador
+
 prices:
     path: /precios
     controller: App\Controller\CotizadorController::prices
@@ -141,4 +145,9 @@ prices:
 form_data:
     path: /servicios-cotizados
     controller: App\Controller\CotizadorController::formData
+    methods: [POST]
+
+generate_pdf:
+    path: /descargar-cotizacion
+    controller: App\Controller\CotizadorController::generatePDF
     methods: [POST]

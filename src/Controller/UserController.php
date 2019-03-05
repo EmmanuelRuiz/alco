@@ -11,6 +11,8 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 use App\Entity\User;
+use App\Entity\Estimate;
+use App\Entity\Visitor;
 use App\Form\RegisterType;
 
 class UserController extends AbstractController
@@ -58,8 +60,11 @@ class UserController extends AbstractController
 
     public function dashboard(){
 
-        return $this->render('pages/panel-de-control.html.twig', [
+        $estimates_repo = $this->getDoctrine()->getRepository(Estimate::class);
+        $estimates = $estimates_repo->findAll();
 
+        return $this->render('pages/panel-de-control.html.twig', [
+            'estimates' => $estimates
         ]);
     }
 

@@ -20,7 +20,7 @@
 						<td>
 							<a href="{{ path('service_detail', {'id':description.id}) }}">Ver</a>
 							{% if description.user.id == app.user.id %}
-								<a href="{{ path('dashboard') }}">Editar</a>
+								<a href="{{ path('service_edit', {'id':description.id}) }}">Editar</a>
 								<a href="{{ path('service_delete', {'id':description.id}) }}">Eliminar</a>
 							{% endif %}
 						</td>

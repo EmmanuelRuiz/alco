@@ -5,11 +5,9 @@ namespace App\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-
-use App\Entity\ServiceCategory;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class ServiceType extends AbstractType
 {
@@ -24,9 +22,16 @@ class ServiceType extends AbstractType
 		->add('price', NumberType::class, array(
 			'label' => 'Precio'
 		))
+		->add('serviceCategory', EntityType::class, array(
+			'class' => 'App\Entity\ServiceCategory',
+			'label' => 'Categoría',
+			'choice_label' => 'serviceCategoryName',
+			'expanded' => false,
+			'multiple' => false
+
+		))
 		->add('submit', SubmitType::class, array(
 			'label' => 'Guardar'
 		));
-
 	}
 }

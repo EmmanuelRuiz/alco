@@ -73,6 +73,50 @@
 
 	{% endif %}
 
-	<a href="{{ path('contact') }}">Contactar</a>
+	<div class="content-element3">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="row">
+					<div class="col-xs-4">
+						<button type="button" class="btn btn-primary btn-service-category" data-toggle="modal" data-target="#info-client">Descargar PDF</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="info-client" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Datos de contacto</h4>
+					</div>
+
+					<form action="{{ path('generate_pdf') }}" method="POST">
+						<div class="modal-body">
+							<label for="">Nombre: </label>
+							<input type="text" name="name" id="name" required>
+							<label for="">Correo: </label>
+							<input type="email" name="email" id="email" required>
+							<label for="">Teléfono: </label>
+							<input type="number" name="phone" id="phone" required>
+							<label for="">¿De donde nos contactan?: </label>
+							<select name="location" id="location">
+								<option value="Seleccionar">Seleccionar</option>
+								<option value="Playa del Carmen">Playa del Carmen</option>
+								<option value="Cancún">Cancún</option>
+								<option value="Tulúm">Tulúm</option>
+							</select>
+							<label for="">Comentarios: </label>
+							<input type="textarea" name="comment" id="comment" required>
+						</div>
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-primary">Enviar</button>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
 
 {% endblock %}

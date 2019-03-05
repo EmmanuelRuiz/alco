@@ -23,7 +23,7 @@
 						{% if collaborator.id == app.user.id %}
 							<a href="{{ path('collaborator_edit', {'id':collaborator.id}) }}">Editar</a>
 						{% endif %}
-						{% if collaborator.id != app.user.id %}
+						{% if app.user.roleUser == "ROLE_ADMIN" and collaborator.id != app.user.id %}
 							<a href="{{ path('collaborator_delete', {'id':collaborator.id}) }}">Eliminar</a>
 						{% endif %}
 					</td>

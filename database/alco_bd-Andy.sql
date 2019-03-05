@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 01-03-2019 a las 18:12:38
+-- Tiempo de generación: 05-03-2019 a las 18:58:10
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.14
 
@@ -140,14 +140,52 @@ CREATE TABLE IF NOT EXISTS `estimate` (
   PRIMARY KEY (`id`),
   KEY `fk_estimate_service_description` (`service_description_id`),
   KEY `fk_estimate_visitors_is` (`visitors_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `estimate`
 --
 
 INSERT INTO `estimate` (`id`, `service_description_id`, `visitors_id`, `client_name`, `client_email`, `client_phone`, `location`, `comments`, `pdf`, `created_at`) VALUES
-(1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 16:49:49');
+(1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 16:49:49'),
+(2, 46, 12, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 21:33:28'),
+(3, 44, 14, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 21:42:12'),
+(4, 45, 14, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 21:42:12'),
+(5, 46, 14, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 21:42:12'),
+(6, 71, 15, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 22:38:12'),
+(7, 72, 15, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 22:38:12'),
+(8, 44, 18, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 22:45:42'),
+(9, 45, 18, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 22:45:42'),
+(10, 46, 18, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 22:45:42'),
+(11, 71, 19, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 22:46:25'),
+(12, 72, 19, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 22:46:25'),
+(13, 71, 20, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 22:46:58'),
+(14, 72, 20, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 22:46:58'),
+(15, 71, 20, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 22:46:58'),
+(16, 72, 20, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 22:46:58'),
+(17, 73, 20, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 22:46:58'),
+(18, 71, 22, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 22:49:38'),
+(19, 72, 22, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 22:49:38'),
+(20, 73, 22, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-01 22:49:38'),
+(21, 71, 24, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-02 13:33:14'),
+(22, 72, 24, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-02 13:33:14'),
+(23, 71, 25, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-02 14:00:37'),
+(24, 72, 25, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-02 14:00:37'),
+(25, 73, 25, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-02 14:00:37'),
+(26, 71, 26, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-04 13:30:20'),
+(27, 72, 26, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-04 13:30:20'),
+(28, 73, 26, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-04 13:30:20'),
+(29, 47, 27, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-04 14:33:33'),
+(30, 48, 27, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-04 14:33:33'),
+(31, 53, 27, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-04 14:33:33'),
+(32, 54, 27, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-04 14:33:33'),
+(33, 57, 27, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-04 14:33:33'),
+(34, 58, 27, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-04 14:33:33'),
+(35, 59, 27, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-04 14:33:33'),
+(36, 62, 27, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-04 14:33:33'),
+(37, 71, 30, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-05 16:09:13'),
+(38, 73, 30, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-05 16:09:13'),
+(39, 73, 31, NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-05 18:44:11');
 
 -- --------------------------------------------------------
 
@@ -242,7 +280,18 @@ CREATE TABLE IF NOT EXISTS `paint_data` (
   PRIMARY KEY (`id`),
   KEY `fk_paint_data_service_description` (`service_description_id`),
   KEY `fk_paint_data_visitors` (`visitors_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `paint_data`
+--
+
+INSERT INTO `paint_data` (`id`, `service_description_id`, `visitors_id`, `base`, `height`, `square_maters`, `price`, `comments`, `created_at`) VALUES
+(1, 71, 23, 4, 5, 20, 1000, 'h', '2019-03-02 13:31:49'),
+(2, 71, 24, 4, 5, 20, 1000, 'h', '2019-03-02 13:33:14'),
+(3, 71, 25, 4, 5, 20, 500, 'p', '2019-03-02 14:00:37'),
+(4, 71, 26, 4, 5, 20, 500, 'p', '2019-03-04 13:30:20'),
+(5, 71, 30, 4, 5, 20, 500, 'g', '2019-03-05 16:09:13');
 
 -- --------------------------------------------------------
 
@@ -276,7 +325,7 @@ CREATE TABLE IF NOT EXISTS `service_category` (
   `update_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_service_category_users` (`users_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `service_category`
@@ -292,7 +341,7 @@ INSERT INTO `service_category` (`id`, `users_id`, `service_category_name`, `crea
 (16, 2, 'Fumigaciones', '2019-01-21 04:00:00', '2019-01-21 04:00:00'),
 (17, 2, 'Carpintería', '2019-01-21 04:00:00', '2019-01-21 04:00:00'),
 (18, 2, 'Albañilería', '2019-01-21 04:00:00', '2019-01-21 04:00:00'),
-(24, 5, 'Prueba', '2019-02-26 22:54:12', '2019-02-26 22:54:22');
+(24, 5, 'Pruebita', '2019-02-26 22:54:12', '2019-03-04 16:10:44');
 
 -- --------------------------------------------------------
 
@@ -313,7 +362,7 @@ CREATE TABLE IF NOT EXISTS `service_description` (
   PRIMARY KEY (`id`),
   KEY `fk_service_description_users` (`users_id`),
   KEY `fk_service_description_service_category` (`service_category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `service_description`
@@ -359,10 +408,10 @@ INSERT INTO `service_description` (`id`, `users_id`, `service_category_id`, `des
 (67, 2, 18, 'Remodelaciones y ampliaciones', 'NULL', 100, '2019-02-22 09:00:00', NULL),
 (68, 2, 18, 'Construcción de albercas y cisternas', 'NULL', 100, '2019-02-22 09:00:00', NULL),
 (69, 2, 18, 'Fabricación de pisos terrazos', 'NULL', 100, '2019-02-22 09:00:00', NULL),
-(70, 10, 24, 'jajajaj', 'NI UNO', 852, '2019-02-26 19:00:00', NULL),
 (71, 5, 10, 'Pintura', 'Comex', 0, '2019-02-27 12:00:00', NULL),
 (72, 5, 10, 'Impermeabilizado', 'Comex', 0, '2019-02-27 12:00:00', NULL),
-(73, 5, 10, 'Precio solamente', 'Andy', 500, '2019-02-27 12:00:00', NULL);
+(73, 5, 10, 'Precio solamente', 'Andy', 500, '2019-02-27 12:00:00', NULL),
+(75, 5, 24, 'gggg', 'ffff', 565, '2019-03-04 16:13:59', '2019-03-04 16:33:30');
 
 -- --------------------------------------------------------
 
@@ -402,7 +451,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `role_user` varchar(50) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `users`
@@ -410,9 +459,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `name`, `lastname`, `email`, `password`, `role_user`, `created_at`) VALUES
 (2, 'Juan Enrique', 'Amaya Ku', 'amayajuan95@gmail.com', 'adja2019', 'ROLE_ADMIN', '2019-01-21 04:00:00'),
-(5, 'Andy', 'Ayala', 'andy@andy.com', '$2y$04$924eskgLxbLXoVHtztH.r.exGJT8kfhzeBxjpxoUB4gHBl63SlOGS', 'ROLE_USER', '2019-02-25 22:54:15'),
-(8, 'Chencho', 'Dzul', 'aa@aa.com', '$2y$04$E/QZ01bEuMsva/DAxkfvnezfpa2OS1QawJMjmC.4iPnaZG5nMB0jq', 'ROLE_USER', '2019-02-26 22:58:01'),
-(10, 'Pedros', 'Messi', 'pedro@pedro.com', '$2y$04$Vvopaxl7.nItajDRhl6qO.pvsXQOTIFC1nbIetyM75x.wIBiwMHiK', 'ROLE_USER', '2019-02-26 23:14:33');
+(5, 'Andy', 'Ayala', 'andy@andy.com', '$2y$04$924eskgLxbLXoVHtztH.r.exGJT8kfhzeBxjpxoUB4gHBl63SlOGS', 'ROLE_ADMIN', '2019-02-25 22:54:15'),
+(10, 'Pedro', 'Messi', 'pedro@pedro.com', '$2y$04$Vvopaxl7.nItajDRhl6qO.pvsXQOTIFC1nbIetyM75x.wIBiwMHiK', 'ROLE_USER', '2019-02-26 23:14:33');
 
 -- --------------------------------------------------------
 
@@ -426,7 +474,7 @@ CREATE TABLE IF NOT EXISTS `visitors` (
   `name` varchar(200) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `visitors`
@@ -440,7 +488,30 @@ INSERT INTO `visitors` (`id`, `name`, `created_at`) VALUES
 (5, 'visitante', '2019-03-01 16:39:42'),
 (6, 'visitante', '2019-03-01 16:41:37'),
 (7, 'visitante', '2019-03-01 16:42:08'),
-(8, 'visitante', '2019-03-01 16:50:29');
+(8, 'visitante', '2019-03-01 16:50:29'),
+(9, 'visitante', '2019-03-01 21:29:00'),
+(10, 'visitante', '2019-03-01 21:31:39'),
+(11, 'visitante', '2019-03-01 21:32:29'),
+(12, 'visitante', '2019-03-01 21:33:28'),
+(13, 'visitante', '2019-03-01 21:39:58'),
+(14, 'visitante', '2019-03-01 21:42:12'),
+(15, 'visitante', '2019-03-01 22:38:12'),
+(16, 'visitante', '2019-03-01 22:42:23'),
+(17, 'visitante', '2019-03-01 22:43:10'),
+(18, 'visitante', '2019-03-01 22:45:42'),
+(19, 'visitante', '2019-03-01 22:46:25'),
+(20, 'visitante', '2019-03-01 22:46:58'),
+(21, 'visitante', '2019-03-01 22:48:42'),
+(22, 'visitante', '2019-03-01 22:49:38'),
+(23, 'visitante', '2019-03-02 13:31:49'),
+(24, 'visitante', '2019-03-02 13:33:11'),
+(25, 'visitante', '2019-03-02 14:00:37'),
+(26, 'visitante', '2019-03-04 13:30:19'),
+(27, 'visitante', '2019-03-04 14:33:33'),
+(28, 'visitante', '2019-03-04 15:17:26'),
+(29, 'visitante', '2019-03-04 15:17:44'),
+(30, 'visitante', '2019-03-05 16:09:13'),
+(31, 'visitante', '2019-03-05 18:44:10');
 
 -- --------------------------------------------------------
 
@@ -462,7 +533,17 @@ CREATE TABLE IF NOT EXISTS `waterproofing_data` (
   PRIMARY KEY (`id`),
   KEY `fk_waterproofing_data_service_description` (`service_description_id`),
   KEY `fk_waterproofing_data_visitors` (`visitors_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `waterproofing_data`
+--
+
+INSERT INTO `waterproofing_data` (`id`, `service_description_id`, `visitors_id`, `base`, `height`, `square_maters`, `price`, `comments`, `created_at`) VALUES
+(1, 72, 23, 10, 5, 50, 5000, 'k', '2019-03-02 13:31:50'),
+(2, 72, 24, 10, 5, 50, 5000, 'k', '2019-03-02 13:33:14'),
+(3, 72, 25, 12, 12, 144, 1000, 'g', '2019-03-02 14:00:37'),
+(4, 72, 26, 10, 5, 50, 1000, 'g', '2019-03-04 13:30:20');
 
 --
 -- Restricciones para tablas volcadas

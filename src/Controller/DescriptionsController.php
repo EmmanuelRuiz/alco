@@ -45,10 +45,6 @@ class DescriptionsController extends AbstractController
 
     public function delete(ServiceDescription $serviceDescription, UserInterface $user){
 
-        if (!$user || $user->getId() != $serviceDescription->getUser()->getId()) {
-            return $this->redirectToRoute('list_services');
-        }
-
         if (!$serviceDescription) {
             return $this->redirectToRoute('list_services');
         }
@@ -69,7 +65,7 @@ class DescriptionsController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-        	$service->setCreatedAt(new \DateTime('now'));
+            $service->setCreatedAt(new \DateTime('now'));
             $service->setUser($user);
 
             $em = $this->getDoctrine()->getManager();
@@ -77,13 +73,38 @@ class DescriptionsController extends AbstractController
             $em->flush();
 
             return $this->redirect($this->generateUrl('service_detail', ['id' => $service->getId()]));
-
         }
 
         return $this->render('pages/crear-servicio.html.twig', [
             'form' => $form->createView()
         ]);
 
+    }
+
+    public function edit(Request $request, ServiceDescription $serviceDescription, UserInterface $user){
+
+        if (!$user || $user->getId() != $serviceDescription->getUser()->getId()) {
+            return $this->redirectToRoute('list_services');
+        }
+
+        $form = $this->createForm(ServiceType::class, $serviceDescription);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $serviceDescription->setUpdateAt(new \DateTime('now'));
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($serviceDescription);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('service_detail', ['id' => $serviceDescription->getId()]));
+        }
+
+        return $this->render('pages/crear-servicio.html.twig',[
+            'edit' => true,
+            'form' => $form->createView()
+        ]);
     }
 
 }

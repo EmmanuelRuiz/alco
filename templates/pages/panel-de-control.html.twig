@@ -5,7 +5,36 @@
 	<br>
 	<br>
 	<br>
-	<h4><a href="{{ path('register') }}">Nuevo Colaborador</a></h4>
-	<h4><a href="{{ path('category_creation') }}">Nueva Categoría</a></h4>
-	<h4><a href="{{ path('service_creation') }}">Nuevo Servicio</a></h4>
+	{% if app.user %}
+		<h4><a href="{{ path('register') }}">Nuevo Colaborador</a></h4>
+		<h4><a href="{{ path('category_creation') }}">Nueva Categoría</a></h4>
+		<h4><a href="{{ path('service_creation') }}">Nuevo Servicio</a></h4>
+		<br>
+		{% if estimates|length >= 1 %}
+			<table>
+				<tr>
+					<th>Nombre</th>
+					<th>Correo</th>
+					<th>Teléfono</th>
+					<th>Lugar</th>
+					<th>Comentario</th>
+					<th>PDF</th>
+					<th>Fecha de la cotización</th>
+				</tr>
+				{% for estimate in estimates %}
+					<tr>
+						<td>{{ estimate.clientName }}</td>
+						<td>{{ estimate.clientEmail }}</td>
+						<td>{{ estimate.clientPhone }}</td>
+						<td>{{ estimate.location }}</td>
+						<td>{{ estimate.comments }}</td>
+						<td>{{ estimate.pdf }}</td>
+						<td>{{ estimate.createdAt|date('d/m/Y') }}</td>
+					</tr>
+				{% endfor %}
+			</table>
+		{% else %}
+		<strong>No hay cotizaciones disponibles</strong>
+		{% endif %}
+	{% endif %}
 {% endblock %}
