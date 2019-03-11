@@ -92,7 +92,7 @@
 						<h4 class="modal-title" id="myModalLabel">Datos de contacto</h4>
 					</div>
 
-					<form action="{{ path('generate_pdf') }}" method="POST">
+					<form action="{{ path('user_information') }}" method="POST">
 						<div class="modal-body">
 							<label for="">Nombre: </label>
 							<input type="text" name="name" id="name" required>
@@ -109,6 +109,7 @@
 							</select>
 							<label for="">Comentarios: </label>
 							<input type="textarea" name="comment" id="comment" required>
+							<input type="hidden" id="visitor" name="visitor" value="{{ visitor.id }}">
 						</div>
 						<div class="modal-footer">
 							<button type="submit" class="btn btn-primary">Enviar</button>

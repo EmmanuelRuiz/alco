@@ -147,7 +147,7 @@ form_data:
     controller: App\Controller\CotizadorController::formData
     methods: [POST]
 
-generate_pdf:
-    path: /descargar-cotizacion
-    controller: App\Controller\CotizadorController::generatePDF
+user_information:
+    path: /informacion-de-contacto
+    controller: App\Controller\CotizadorController::userInformation
     methods: [POST]

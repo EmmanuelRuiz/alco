@@ -69,7 +69,6 @@ class CotizadorController extends AbstractController
         $em = $this->getDoctrine()->getManager();
         $em->persist($visitor);
         $em->flush();
-        
 
         if ($bases == "" && $alturas == "" && $comentarios == "") {
 
@@ -98,7 +97,8 @@ class CotizadorController extends AbstractController
             return $this->render('cotizador/servicios-cotizados.html.twig', [
                 'service_description' => $service_description,
                 'precioTotal' => $precioTotal,
-                'tipo' => $tipo
+                'tipo' => $tipo,
+                'visitor' => $visitor
             ]);
 
         }else if (!$serviciosConPrecio == "") {
@@ -336,27 +336,32 @@ class CotizadorController extends AbstractController
         }
     }
 
-    public function generatePDF(Request $request, Estimate $estimate){
+    public function userInformation(Request $request){
 
-        /*
         $nombre = $request->get("name");
         $correo = $request->get("email");
         $telefono = $request->get("phone");
         $lugar = $request->get("location");
         $comentario = $request->get("comment");
-
-        $estimate->setClientName($nombre);
-        $estimate->setClientEmail($correo);
-        $estimate->setClientPhone($telefono);
-        $estimate->setLocation($lugar);
-        $estimate->setComments($comentario);
-
+        $visitor = $request->get("visitor");
         $em = $this->getDoctrine()->getManager();
-        $em->persist($estimate);
-        $em->flush();
+
+        $estimate_repo = $this->getDoctrine()->getRepository(Estimate::class);
+        $estimates = $estimate_repo->findBy([
+            'visitor' => $visitor
+        ]);
+
+        foreach ($estimates as $estimate) {
+            $estimate->setClientName($nombre);
+            $estimate->setClientEmail($correo);
+            $estimate->setClientPhone($telefono);
+            $estimate->setLocation($lugar);
+            $estimate->setComments($comentario);
+            $em->persist($estimate);
+            $em->flush();
+        }
 
         return $this->redirectToRoute('cotizador');
-        */
 
     }
 
