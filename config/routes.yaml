@@ -151,3 +151,7 @@ user_information:
     path: /informacion-de-contacto
     controller: App\Controller\CotizadorController::userInformation
     methods: [POST]
+
+pdf:
+    path: /pdf
+    controller: App\Controller\PagesController::pdf
