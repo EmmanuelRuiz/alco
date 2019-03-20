@@ -24,6 +24,10 @@ class PagesController extends AbstractController
     	return $this->render('pages/portafolio.html.twig');
     }
 
+    public function portafolioProximamente(){
+        return $this->render('pages/portafolio-proximamente.html.twig');
+    }
+
     public function nosotros(){
     	return $this->render('pages/nosotros.html.twig');
     }

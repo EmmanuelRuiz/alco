@@ -31,6 +31,12 @@ class CotizadorController extends AbstractController
 
     }
 
+    public function cotizadorProximamente(){
+
+        return $this->render('cotizador/cotizador-proximamente.html.twig');
+
+    }
+
     public function prices(Request $request){
 
         $services = $request->get("services");

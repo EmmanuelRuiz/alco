@@ -10,6 +10,10 @@ portfolio:
     path: /trabajos-realizados-por-alco
     controller: App\Controller\PagesController::portafolio
 
+portfolio_prox:
+    path: /trabajos-por-alco
+    controller: App\Controller\PagesController::portafolioProximamente
+
 about:
     path: /acerca-de-alco-mantenimiento-integral
     controller: App\Controller\PagesController::nosotros
@@ -136,6 +140,10 @@ service_edit:
 cotizador:
     path: /cotiza-tu-servicio
     controller: App\Controller\CotizadorController::cotizador
+
+cotizador_prox:
+    path: /cotizador-en-linea
+    controller: App\Controller\CotizadorController::cotizadorProximamente
 
 prices:
     path: /precios
