@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 use Symfony\Component\HttpFoundation\Response;
+use App\Entity\Estimate;
 
 class PagesController extends AbstractController
 {
@@ -74,19 +75,5 @@ class PagesController extends AbstractController
     public function electrodomesticos(){
     	return $this->render('pages/servicios/electrodomesticos.html.twig');
     }
-
-    public function pdf(\Knp\Snappy\Pdf $snappy) {
-
-        $html = $this->renderView('pdf.html.twig');
-        $filename = sprintf('prueba.pdf', date('Y-m-d-hh-ss'));
-
-        return new Response(
-            $snappy->getOutputFromHtml($html),
-            200,
-            [
-            'Content-Type' => 'application/pdf',
-            'Content-Disposition' => sprintf('attachment; filename="%s"', $filename),
-            ]
-);
-    }
+    
 }

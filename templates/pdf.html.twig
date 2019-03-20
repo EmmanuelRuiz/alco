@@ -1,17 +1,45 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <title>Hello, world!</title>
-  </head>
-  <body>
+    <title>PDF</title>
+</head>
+<body>
     <div class="container main-container">
-    {% block body %}
-    <p>Esto es una prueba</p>
-    {% endblock %}
+        {% block body %}
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th>Servicio</th>
+                    <th>Precio</th>
+                    <th>Fecha de la cotización</th>
+                </tr>
+                {% for estimate in estimates %}
+                    <tr>
+                        <td>{{ estimate.clientName }}</td>
+                        <td>{{ estimate.clientEmail }}</td>
+                        <td>{{ estimate.clientPhone }}</td>
+                        <td>{{ estimate.serviceDescription.description }}</td>
+                        {% if estimate.serviceDescription.price > 0 %}
+                            <td>{{ estimate.serviceDescription.price }}</td>
+                        {% else %}
+                            {% for servicios in serviciosConPrecio %}
+                                {% for precio in servicios %}
+                                    {% if estimate.serviceDescription == precio.serviceDescription %}
+                                        <td>{{ precio.price }}</td>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endfor %}
+                        {% endif %}
+                        <td>{{ estimate.createdAt|date('d/m/Y') }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <p>Total: ${{ precioTotal }}</p>
+        {% endblock %}
     </div>
-    
-  </body>
+</body>
 </html>

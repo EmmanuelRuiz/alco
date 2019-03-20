@@ -61,11 +61,9 @@ class CotizadorController extends AbstractController
             2 = Solo servicios que tengan formulario
         */
         $tipo = 0;
-
         $visitor = new Visitor();
         $visitor->setName('visitante');
         $visitor->setCreatedAt(new \DateTime('now'));
-        
         $em = $this->getDoctrine()->getManager();
         $em->persist($visitor);
         $em->flush();
@@ -143,11 +141,11 @@ class CotizadorController extends AbstractController
                                     }
                                 }
                             }
+                            /* Cuando se agregen más servicios aqui los pondre */
                             foreach ($service_description as $description) {
                                 if ($description->getId() == $idsServicios[$i]) {
                                     switch ($description->getDescription()) {
                                         case 'Pintura':
-                                            /*
                                             $paintData = new PaintData();
                                             $em = $this->getDoctrine()->getManager();
                                             $idDescription = $em->getRepository('App\Entity\ServiceDescription')->find($idsServicios[$i]);
@@ -157,16 +155,14 @@ class CotizadorController extends AbstractController
                                             $paintData->setBase($bases[$i]);
                                             $paintData->setHeight($alturas[$i]);
                                             $paintData->setSquareMaters($metrosCuadrados[$i]);
-                                            $paintData->setPrice($serviciosConPrecio[$i]);
+                                            $paintData->setPrice($serviciosConPrecio[$i+$count]);
                                             $paintData->setComments($comentarios[$i]);
                                             $paintData->setCreatedAt(new \DateTime('now'));
                                             $em->persist($paintData);
                                             $em->flush();
-                                            */
                                             break;
 
                                         case 'Impermeabilizado':
-                                            /*
                                             $waterproofingData = new WaterproofingData();
                                             $em = $this->getDoctrine()->getManager();
                                             $idDescription = $em->getRepository('App\Entity\ServiceDescription')->find($idsServicios[$i]);
@@ -176,12 +172,11 @@ class CotizadorController extends AbstractController
                                             $waterproofingData->setBase($bases[$i]);
                                             $waterproofingData->setHeight($alturas[$i]);
                                             $waterproofingData->setSquareMaters($metrosCuadrados[$i]);
-                                            $waterproofingData->setPrice($serviciosConPrecio[$i]);
+                                            $waterproofingData->setPrice($serviciosConPrecio[$i+$count]);
                                             $waterproofingData->setComments($comentarios[$i]);
                                             $waterproofingData->setCreatedAt(new \DateTime('now'));
                                             $em->persist($waterproofingData);
                                             $em->flush();
-                                            */
                                             break;
                                     }
                                 }
@@ -201,7 +196,6 @@ class CotizadorController extends AbstractController
             }
             for ($i = 0; $i < count($idsServicios); $i++) {
                 for ($i = 0; $i < count($serviciosConPrecio); $i++) {
-                    /*
                     $estimate = new Estimate();
                     $em = $this->getDoctrine()->getManager();
                     $idDescription = $em->getRepository('App\Entity\ServiceDescription')->find($idsServicios[$i]);
@@ -211,7 +205,6 @@ class CotizadorController extends AbstractController
                     $estimate->setCreatedAt(new \DateTime('now'));
                     $em->persist($estimate);
                     $em->flush();
-                    */
                 }
             }
             $tipo = 1;
@@ -219,7 +212,8 @@ class CotizadorController extends AbstractController
                 'serviciosConSusValores' => $serviciosConSusValores,
                 'service_description' => $service_description,
                 'precioTotal' => $precioTotal,
-                'tipo' => $tipo
+                'tipo' => $tipo,
+                'visitor' => $visitor
             ]);
 
         }else{
@@ -258,11 +252,11 @@ class CotizadorController extends AbstractController
                                     }
                                 }
                             }
+                            /* Cuando se agregen más servicios aqui los pondre */
                             foreach ($service_description as $description) {
                                 if ($description->getId() == $idsServicios[$i]) {
                                     switch ($description->getDescription()) {
                                         case 'Pintura':
-                                            /*
                                             $paintData = new PaintData();
                                             $em = $this->getDoctrine()->getManager();
                                             $idDescription = $em->getRepository('App\Entity\ServiceDescription')->find($idsServicios[$i]);
@@ -277,11 +271,9 @@ class CotizadorController extends AbstractController
                                             $paintData->setCreatedAt(new \DateTime('now'));
                                             $em->persist($paintData);
                                             $em->flush();
-                                            */
                                             break;
 
                                         case 'Impermeabilizado':
-                                            /*
                                             $waterproofingData = new WaterproofingData();
                                             $em = $this->getDoctrine()->getManager();
                                             $idDescription = $em->getRepository('App\Entity\ServiceDescription')->find($idsServicios[$i]);
@@ -296,7 +288,6 @@ class CotizadorController extends AbstractController
                                             $waterproofingData->setCreatedAt(new \DateTime('now'));
                                             $em->persist($waterproofingData);
                                             $em->flush();
-                                            */
                                             break;
                                     }
                                 }
@@ -310,7 +301,6 @@ class CotizadorController extends AbstractController
                                 'precio' => $serviciosConPrecio[$i]
                             ));
                             $precioTotal = $precioTotal + $serviciosConPrecio[$i];
-                            /*
                             $estimate = new Estimate();
                             $em = $this->getDoctrine()->getManager();
                             $idDescription = $em->getRepository('App\Entity\ServiceDescription')->find($idsServicios[$i]);
@@ -320,7 +310,6 @@ class CotizadorController extends AbstractController
                             $estimate->setCreatedAt(new \DateTime('now'));
                             $em->persist($estimate);
                             $em->flush();
-                            */
                         }
                     }
                 }
@@ -330,13 +319,14 @@ class CotizadorController extends AbstractController
                 'serviciosConSusValores' => $serviciosConSusValores,
                 'service_description' => $service_description,
                 'precioTotal' => $precioTotal,
-                'tipo' => $tipo
+                'tipo' => $tipo,
+                'visitor' => $visitor
             ]);
 
         }
     }
 
-    public function userInformation(Request $request){
+    public function userInformation(Request $request, \Knp\Snappy\Pdf $snappy){
 
         $nombre = $request->get("name");
         $correo = $request->get("email");
@@ -344,12 +334,35 @@ class CotizadorController extends AbstractController
         $lugar = $request->get("location");
         $comentario = $request->get("comment");
         $visitor = $request->get("visitor");
+        $precioTotal = $request->get("precioTotal");
         $em = $this->getDoctrine()->getManager();
+        $serviciosConPrecio = array();
 
         $estimate_repo = $this->getDoctrine()->getRepository(Estimate::class);
         $estimates = $estimate_repo->findBy([
             'visitor' => $visitor
         ]);
+
+        /* Cuando se agregen más servicios aqui los pondre */
+        foreach ($estimates as $estimate) {
+            switch ($estimate->getServiceDescription()->getDescription()) {
+                case 'Pintura':
+                    $paint_repo = $this->getDoctrine()->getRepository(PaintData::class);
+                    $paint = $paint_repo->findBy([
+                        'visitor' => $visitor
+                    ]);
+                    array_push($serviciosConPrecio, $paint);
+                    break;
+
+                case 'Impermeabilizado':
+                    $waterproofing_repo = $this->getDoctrine()->getRepository(WaterproofingData::class);
+                    $waterproofing = $waterproofing_repo->findBy([
+                        'visitor' => $visitor
+                    ]);
+                    array_push($serviciosConPrecio, $waterproofing);
+                    break;
+            }
+        }
 
         foreach ($estimates as $estimate) {
             $estimate->setClientName($nombre);
@@ -361,7 +374,21 @@ class CotizadorController extends AbstractController
             $em->flush();
         }
 
-        return $this->redirectToRoute('cotizador');
+        $html = $this->renderView('pdf.html.twig', array(
+            'estimates' => $estimates,
+            'precioTotal' => $precioTotal,
+            'serviciosConPrecio' => $serviciosConPrecio
+        ));
+        $filename = sprintf('Cotizacion-Alco.pdf', date('Y-m-d-hh-ss'));
+
+        return new Response(
+            $snappy->getOutputFromHtml($html),
+            200,
+            [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => sprintf('attachment; filename="%s"', $filename),
+            ]
+        );
 
     }
 
