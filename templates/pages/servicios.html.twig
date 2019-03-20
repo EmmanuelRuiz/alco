@@ -23,7 +23,7 @@
 	
 	<div class="page-section-bg2 parallax-section">
 		<div class="container extra-width">
-			<h2 class="section-title align-center">Servicios</h2>
+			<h2 class="section-title align-center">SERVICIOS</h2>
 			<div class="icons-box style-4">
 				<div class="flex-row fx-col-3">
 					
@@ -188,15 +188,16 @@
 			</div>
 		</div>
 	</div>
-	<div class="call-out type1">
+	<!--<div class="call-out type1">
 		<div class="container">
 			<div class="align-center">
 				<h2>¿Deseas ver nuestro portafolio?</h2>
 				<h4><a href="{{ path('portfolio') }}" style="color: white;">Haz click para ver los trabajos que hemos realizado.</a></h4>
 			</div>
 		</div>
-	</div>
-	<div class="page-section">
+	</div>-->
+
+	<!--<div class="page-section">
 		<div class="container">
 			<div class="carousel-type-2">
 				<div class="owl-carousel" data-item-margin="30" data-max-items="6" data-autoplay="true">
@@ -234,58 +235,56 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="call-out call-out-form">
-		<div class="container">
-			<div class="call-out-item">
-				<span class="call-out-icon cicon-glove"></span>
-				
-				<div class="row">
-					<div class="col-md-3 col-sm-12">
-						<h2 class="nl-title">Envíanos un mensaje</h2>
-					</div>
-					<div class="col-md-9 col-sm-12">
-						
-						<form id="contact-form" class="form-wrap flex-row fx-col-3 style-2">
-							
-							<div class="form-col">
-								<input type="text" name="cf-name" placeholder="Nombre" required>
-							</div>
-							<div class="form-col">
-								<input type="email" name="cf-email" placeholder="E-mail" required>
-							</div>
-							<div class="form-col">
-								<input type="tel" name="cf-phone" placeholder="Teléfono" required>
-							</div>
-							<div class="form-col">
-								<div class="custom-select">
-									<div class="select-title">Servicio</div>
-								<ul id="menu-type" class="select-list"></ul>
-								<select class="hide" name="cf-service">
-									<option value="menu">Arquitectura</option>
-									<option value="menu">Obra civil</option>
-									<option value="menu">Acabados</option>
-									<option value="menu">Instalaciones Hidráulicas y Sanitarias</option>
-									<option value="menu">Instalaciones Eléctricas</option>
-									<option value="menu">Albercas</option>
-									<option value="menu">Fumigación</option>
-									<option value="menu">Aires acondicionados</option>
-									<option value="menu">Instalaciones de gas</option>
-									<option value="menu">Palapas y Pergolas</option>
-									<option value="menu">Mantenimiento de electrodomésticos</option>
-								</select>
-							</div>
-						</div>
-						<div class="form-col">
-							<textarea name="cf-message" placeholder="Comentario"></textarea>
-						</div>
-						<div class="form-col">
-							<button type="submit" data-type="submit" class="btn btn-style-5 full-width" id="btn-send">Enviar mensaje</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+	</div>-->
+	<div class="call-out call-out-form custom-background-grey">
+            <div class="container">
+                <div class="call-out-item">
+                    
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <h2 class="section-title text-custom-color-grey">ENVÍANOS UN MENSAJE</h2>
+                            <p class="text-size-medium text-custom-color-grey">Ingresa tus datos y envianos un mensaje con el servicio que te interesa y enseguida nos pondremos en contacto contigo.</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <form id="contact-form" class="form-wrap flex-row fx-col-2 style-2">
+                                <div class="form-col">
+                                    <input type="text" name="cf-name" placeholder="Nombre*" required>
+                                </div>
+                                <div class="form-col">
+                                    <input type="email" name="cf-email" placeholder="E-mail*" required>
+                                </div>
+                                <div class="form-col">
+                                    <input type="tel" name="cf-phone" placeholder="Teléfono*" required>
+                                </div>
+                                <div class="form-col">
+                                    <div class="custom-select">
+                                        <div class="select-title">Servicio*</div>
+                                    <ul id="menu-type" class="select-list"></ul>
+                                    <select class="hide" name="cf-service">
+                                        <option value="menu">Arquitectura</option>
+                                        <option value="menu">Obra civil</option>
+                                        <option value="menu">Acabados</option>
+                                        <option value="menu">Instalaciones Hidráulicas y Sanitarias</option>
+                                        <option value="menu">Instalaciones Eléctricas</option>
+                                        <option value="menu">Albercas</option>
+                                        <option value="menu">Fumigación</option>
+                                        <option value="menu">Aires acondicionados</option>
+                                        <option value="menu">Instalaciones de gas</option>
+                                        <option value="menu">Palapas y Pergolas</option>
+                                        <option value="menu">Mantenimiento de electrodomésticos</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-col full-width">
+                                <textarea name="cf-message"  placeholder="Mensaje*"></textarea>
+                            </div>
+                            <div class="form-col full-width">
+                                <button type="submit" data-type="submit" class="btn btn-style-5 full-width" id="btn-send">Enviar mensaje</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
