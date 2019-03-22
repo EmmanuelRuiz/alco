@@ -138,7 +138,7 @@ html,body{height: 100%;}
 ------------------------------------- */
 
 body{
-  font: 16px/26px 'Heebo', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #222;
   font-weight: 400;
   position: relative;
@@ -392,7 +392,7 @@ img.alignright{
 ------------------------------------- */
 
 h1,h2,h3,h4,h5,h6{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Fjalla One', sans-serif;
   color: #2A4353;
   line-height: 1.3em;
   font-weight: 400;
@@ -1000,7 +1000,7 @@ a:hover .tooltip{
 }
 
 .main-navigation > ul > li > a{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Fjalla One', sans-serif;
   color: #2a2c32;
   font-weight: 500;
   text-transform: uppercase;
@@ -1754,7 +1754,7 @@ button.search-button:before{content: "\e922";}
 
 [class*="scaption"][class*="-large"],
 [class*="scaption"][class*="-medium"]{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 [class*="scaption"][class*="-large"]{
@@ -1925,7 +1925,7 @@ button.search-button:before{content: "\e922";}
   /*----------- Buttons --------------*/
 
   .btn{
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     padding: 10px 30px;
     display: inline-block;
     font-size: 16px;
@@ -1954,7 +1954,7 @@ button.search-button:before{content: "\e922";}
   .btn-big{
     padding: 15px 30px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: normal;
     letter-spacing: 0.5px;
   }
 
@@ -2771,6 +2771,7 @@ button.search-button:before{content: "\e922";}
       }
 
       .contact-info li.info-item > .item-info span{
+        font-family: 'Fjalla One', sans-serif;
         font-size: 14px;
         text-transform: uppercase;
         display: block;
