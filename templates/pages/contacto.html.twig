@@ -58,58 +58,11 @@
 					</ul>
 				</div>
 				<div class="col-sm-8">
-					
 					<h2>ESCRÍBENOS</h2>
 					<p>Respondemos tu mensaje lo más rápido posible, estaremos encantados de ayudar.</p>
-					<form id="contact-form" class="contact-form">
-						<div class="row flex-row">
-							<div class="col-xs-6">
-								
-								<label class="required">Nombre</label>
-								<input name="cf-name" type="text">
-								
-							</div>
-							<div class="col-xs-6">
-								
-								<label class="required">Apellido</label>
-								<input type="text" name="cf-name" required>
-								
-							</div>
-						</div>
-						<div class="row flex-row">
-							<div class="col-xs-6">
-								
-								<label class="required">E-mail</label>
-								<input name="cf-email" type="email" required>
-								
-							</div>
-							<div class="col-xs-6">
-								
-								<label class="required">Teléfono</label>
-								<input type="tel" name="cf-phone" required>
-								
-							</div>
-						</div>
-						<div class="row flex-row">
-							<div class="col-sm-12">
-								<label class="required">Ciudad</label>
-								<input type="text" name="cf-city" required>
-							</div>
-						</div>
-						<div class="row flex-row">
-							<div class="col-sm-12">
-								
-								<label class="required">Comentarios</label>
-								<textarea rows="5" name="cf-message"></textarea>
-							</div>
-						</div>
-						<div class="row flex-row">
-							<div class="col-sm-12">
-								<button type="submit" class="btn btn-style-5" data-type="submit">Enviar mensaje</button>
-								
-							</div>
-						</div>
-					</form>
+					{{ form_start(form) }}
+					{{ form_widget(form) }}
+					{{ form_end(form) }}
 				</div>
 			</div>
 		</div>

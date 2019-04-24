@@ -20,7 +20,7 @@ about:
 
 contact:
     path: /alco-informacion-de-contacto
-    controller: App\Controller\PagesController::contacto
+    controller: App\Controller\ContactController::contact
 
 services_arquitectura:
     path: /servicios/servicio-de-arquitectura-por-alco
