@@ -29,7 +29,7 @@ class ContactController extends AbstractController
                         Correo: ' . $contactFormData['email'] . '<br>
                         Teléfono: ' . $contactFormData['phone'] . '<br>
                         Ciudad: ' . $contactFormData['city'] . '<br>
-                        Comentarios: ' . $contactFormData['comments'] . '<br>', 'text/html');
+                        Comentarios: ' . $contactFormData['message'] . '<br>', 'text/html');
             $mailer->send($message);
 
             return $this->redirectToRoute('contact');

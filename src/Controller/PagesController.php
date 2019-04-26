@@ -4,16 +4,17 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
-
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+
 use App\Entity\Estimate;
+
 
 class PagesController extends AbstractController
 {
     public function index(){
-        return $this->render('pages/index.html.twig', [
-            'controller_name' => 'PagesController',
-        ]);
+
+        return $this->render('pages/index.html.twig');
     }
 
     public function servicios(){

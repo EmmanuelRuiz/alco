@@ -8,6 +8,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class ContactType extends AbstractType
 {
@@ -16,7 +17,7 @@ class ContactType extends AbstractType
 			'label' => 'Nombre'
 		))
 		->add('lastname', TextType::class, array(
-			'label' => 'Apellidos'
+			'label' => 'Apellido'
 		))
 		->add('email', EmailType::class, array(
 			'label' => 'Correo electrónico'
@@ -27,11 +28,14 @@ class ContactType extends AbstractType
 		->add('city', TextType::class, array(
 			'label' => 'Ciudad'
 		))
-		->add('comments', TextType::class, array(
-			'label' => 'Comentarios'
+		->add('message', TextareaType::class, array(
+			'label' => 'Mensaje'
 		))
 		->add('submit', SubmitType::class, array(
-			'label' => 'Enviar'
+			'label' => 'Enviar',
+			'attr' => array(
+				'class' => 'btn btn-style-5'
+			)
 		));
 	}
 }
