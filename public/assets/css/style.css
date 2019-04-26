@@ -2777,6 +2777,7 @@ button.search-button:before{content: "\e922";}
         display: block;
         line-height: 18px;
         font-weight: normal;
+        color: #2A4353; 
       }
 
       .contact-info li.info-item > .item-info > a{

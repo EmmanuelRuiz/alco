@@ -460,46 +460,60 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
                             <h2 class="section-title">ENVÍANOS UN MENSAJE</h2>
-                            <p class="text-size-medium">Ingresa tus datos y envianos un mensaje con el servicio que te interesa y enseguida nos pondremos en contacto contigo.</p>
+                            <p class="text-size-medium text-custom-color-grey-strong">Ingresa tus datos y envianos un mensaje con el servicio que te interesa y enseguida nos pondremos en contacto contigo.</p>
+
+                            <a href="{{ path('contact') }}" class="btn btn-style-5 btn-white">Enviar mensaje ahora</a>
+
                         </div>
                         <div class="col-md-6 col-sm-12">
+                            <h2 class="section-title">INFORMACÍÓN DE CONTACTO</h2>
                             
-                            <form id="contact-form" class="form-wrap flex-row fx-col-2 style-2">
-                                <div class="form-col">
-                                    <input type="text" name="cf-name" placeholder="Nombre*" required>
-                                </div>
-                                <div class="form-col">
-                                    <input type="email" name="cf-email" placeholder="E-mail*" required>
-                                </div>
-                                <div class="form-col">
-                                    <input type="tel" name="cf-phone" placeholder="Teléfono*" required>
-                                </div>
-                                <div class="form-col">
-                                    <div class="custom-select">
-                                        <div class="select-title">Servicio*</div>
-                                    <ul id="menu-type" class="select-list"></ul>
-                                    <select class="hide" name="cf-service">
-                                        <option value="menu">Arquitectura</option>
-                                        <option value="menu">Obra civil</option>
-                                        <option value="menu">Acabados</option>
-                                        <option value="menu">Instalaciones Hidráulicas y Sanitarias</option>
-                                        <option value="menu">Instalaciones Eléctricas</option>
-                                        <option value="menu">Albercas</option>
-                                        <option value="menu">Fumigación</option>
-                                        <option value="menu">Aires acondicionados</option>
-                                        <option value="menu">Instalaciones de gas</option>
-                                        <option value="menu">Palapas y Pergolas</option>
-                                        <option value="menu">Mantenimiento de electrodomésticos</option>
-                                    </select>
-                                </div>
+                            <div class="content-element4" id="contact-info-global">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-12">
+                                        <ul class="contact-info v-type">
+                                            <li class="info-item">
+                                                <i class="licon-map-marker"></i>
+                                                <div class="item-info">
+                                                    <span>Cancún - Playa del carmen - Tulum</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-md-6 col-lg-12">
+                                        <ul class="contact-info v-type">
+                                            <li class="info-item">
+                                                <i class="licon-telephone2"></i>
+                                                <div class="item-info">
+                                                    <span>984 109 3825 / 984 254 1198 </span> 
+                                                </div>
+                                            </li>
+                                        </ul> 
+                                    </div>
+                                    <div class="col-md-6 col-lg-12">
+                                        <ul class="contact-info v-type">
+                                            <li class="info-item">
+                                                <i class="licon-at-sign"></i>
+                                                <div class="item-info">
+                                                    <span>alco@alcoplaya.com</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6 col-lg-12">
+                                         <ul class="contact-info v-type">
+                                            <li class="info-item">
+                                                <i class="licon-clock3"></i>
+                                                <div class="item-info">
+                                                    <span>Lunes - viernes: 9am - 5pm<br>  Sábado: 9am - 2pm</span>
+                                                </div>
+                                            </li>
+                                         </ul>
+                                    </div>
+                                </div> 
                             </div>
-                            <div class="form-col full-width">
-                                <textarea name="cf-message"  placeholder="Mensaje*"></textarea>
-                            </div>
-                            <div class="form-col full-width">
-                                <button type="submit" data-type="submit" class="btn btn-style-5 full-width" id="btn-send">Enviar mensaje</button>
-                            </div>
-                        </form>
+                        </div>     
                     </div>
                 </div>
             </div>

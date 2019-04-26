@@ -50,6 +50,20 @@
     color: #3b5363 !important;
 }
 
+.text-custom-color-grey-strong{
+    color: #2A4353 !important; 
+}
+
+.btn-white{
+    background-color: white !important;
+    color: #1998a6 !important;
+}
+
+.btn-white:hover{
+    background-color: #e6e6e6 !important;
+    color: #1998a6 !important;
+}
+
 
 /* Clases de Ayuda Fin*/
 
@@ -157,3 +171,14 @@
 }
 
 /*Cotizador Fin */
+
+/*Contact Info Global*/
+
+#contact-info-global .contact-info li.info-item > i{
+    font-size: 25px;
+    padding-right: 15px;
+    color: white;
+    line-height: 35px;
+}
+
+/*Contact Info Global Fin*/
